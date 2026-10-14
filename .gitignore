@@ -1,0 +1,15 @@
+# System & Temporary Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# Large Downloads / Offline Saved Webpages
+applications/Facebook_files/
+applications/Facebook.html
+*.zip
+
+# Editor / IDE directories
+.vscode/
+.idea/

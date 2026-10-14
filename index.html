@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurlaila Tahawan | Bilingual L1 Technical Support & Data Operations</title>
+  <meta name="description" content="Portfolio of Nurlaila Tahawan - Bilingual L1 Technical Support Engineer, SQL practitioner, and remote SaaS specialist based in Thailand.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #111827;
+      --bg-card-hover: #1f2937;
+      --border-color: #1e293b;
+      --border-focus: #3b82f6;
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.25);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Background Glow Effects */
+    .bg-glow-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      top: 600px;
+      left: -150px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #3b82f6, #10b981);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+    }
+
+    .btn-nav {
+      background: #1e293b;
+      color: #38bdf8 !important;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-weight: 600 !important;
+      transition: all 0.2s ease;
+    }
+
+    .btn-nav:hover {
+      background: #38bdf8;
+      color: #0b0f19 !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 90px 0 60px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin-bottom: 32px;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      padding: 13px 26px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 18px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-main);
+      padding: 13px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: #3b82f6;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .metric-card {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .metric-val {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #38bdf8;
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3b82f6;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+    }
+
+    /* Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .story-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    .story-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    .story-quote {
+      border-left: 3px solid #10b981;
+      padding-left: 16px;
+      font-style: italic;
+      color: #94a3b8;
+      background: rgba(16, 185, 129, 0.05);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+    }
+
+    .story-img-container {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #000;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .story-img-container img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .story-img-container:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Interactive Diagnostic Sandbox */
+    .sandbox-container {
+      background: #080d1a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .sandbox-tabs {
+      display: flex;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      padding: 6px 12px;
+      gap: 8px;
+    }
+
+    .sandbox-tab {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sandbox-tab.active {
+      background: #1e293b;
+      color: #38bdf8;
+    }
+
+    .sandbox-body {
+      padding: 24px;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    .terminal-window {
+      background: #040812;
+      border: 1px solid #172033;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      padding: 18px;
+      color: #e2e8f0;
+      min-height: 220px;
+    }
+
+    .prompt-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #94a3b8;
+    }
+
+    .prompt-sign {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .command-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .cmd-btn {
+      background: #1e293b;
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cmd-btn:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    .sql-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.82rem;
+    }
+
+    .sql-table th, .sql-table td {
+      border: 1px solid #1e293b;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .sql-table th {
+      background: #0f172a;
+      color: #38bdf8;
+    }
+
+    .sql-table td {
+      color: #cbd5e1;
+    }
+
+    .badge-error {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .badge-ok {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .skill-card:hover {
+      border-color: #3b82f6;
+      transform: translateY(-3px);
+    }
+
+    .skill-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      background: rgba(59, 130, 246, 0.1);
+      color: #38bdf8;
+    }
+
+    .skill-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .cert-thumb {
+      height: 190px;
+      background: #0f172a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cert-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover .cert-thumb img {
+      transform: scale(1.04);
+    }
+
+    .cert-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(11, 15, 25, 0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #93c5fd;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .cert-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cert-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cert-issuer {
+      color: #10b981;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cert-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* Modal Lightbox */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 900px;
+      max-height: 90vh;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .modal-img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      background: #030712;
+    }
+
+    .modal-caption {
+      padding: 18px 24px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-weight: 600;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid #334155;
+      border-radius: 20px;
+      padding: 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .contact-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding: 12px 22px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .contact-item:hover {
+      border-color: #38bdf8;
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    .signature-area {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .signature-area img {
+      max-width: 170px;
+      filter: invert(1) brightness(1.2);
+      opacity: 0.85;
+    }
+
+    .signature-label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.3rem;
+      }
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        display: none;
+      }
+      .contact-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <span class="logo-badge">NT</span>
+        <span>Nurlaila Tahawan</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">Story</a></li>
+          <li><a href="#demos">Diagnostics</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certs">Certificates</a></li>
+          <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Ready for 100% Remote Work | APAC / Thailand Timezone</span>
+      </div>
+      <h1 class="hero-title">
+        Bilingual <span>Technical Support (L1)</span> & Data Operations.
+      </h1>
+      <p class="hero-subtitle">
+        Graduated in English Education with hands-on technical training from <strong>DataRockie Bootcamp (Scholarship Awardee)</strong>. Strong verbal and written English communication combined with solid <strong>SQL querying</strong>, terminal navigation, and an unwavering commitment to high-ticket queue resolution.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#demos" class="btn-primary">
+          <span>⚡ Try Live Diagnostics Demo</span>
+        </a>
+        <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.md" class="btn-secondary" target="_blank">
+          <span>📄 View Full CV (Markdown)</span>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>📬 Contact Nurlaila</span>
+        </a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-val">Fluent EN / TH</div>
+          <div class="metric-label">Bilingual Communication & Presentation</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">SQL Queries</div>
+          <div class="metric-label">Relational Data Checks & Multi-table Joins</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">Python & Bash</div>
+          <div class="metric-label">Actively Learning Scripting & Terminal Triage</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">100% Remote</div>
+          <div class="metric-label">Dedicated Workstation & Fiber Internet Ready</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentic Journey / Story -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-tag">Authentic Background</span>
+        <h2 class="section-title">The Journey into Tech Support</h2>
+        <p class="section-desc">From pedagogical empathy to data-driven technical triage — how family inspiration and disciplined self-study shaped my path.</p>
+      </div>
+
+      <div class="story-card">
+        <div class="story-content">
+          <h3>"If you build your skills, you can work remotely."</h3>
+          <p>
+            My sister, who works in IT, was the one who first opened my eyes to the world of remote technology work. Her advice stayed with me: if I committed to continuous learning and technical mastery, I could build a career supporting global users from anywhere.
+          </p>
+          <div class="story-quote">
+            "Alhamdulillah, I started with zero coding background. Through structured discipline, I practiced typing code step-by-step and earned a scholarship for the Data Science Bootcamp at DataRockie School."
+          </div>
+          <p>
+            My background in <strong>English Education</strong> taught me the most crucial support skill of all: <em>active listening, patience, and translating technical details into clear, reassuring words.</em> Combined with SQL and terminal fundamentals, I'm ready to handle heavy ticket queues with grit and care.
+          </p>
+        </div>
+        <div class="story-img-container" onclick="openModal('images/datarockie_scholarship_story.png', 'Nurlaila\'s Tech Story & DataRockie Scholarship Blog Post')">
+          <img src="images/datarockie_scholarship_story.png" alt="DataRockie Bootcamp Story and Certificates">
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Diagnostic Sandbox -->
+    <section id="demos">
+      <div class="section-header">
+        <span class="section-tag">Hands-On Proof of Skills</span>
+        <h2 class="section-title">Interactive Support Sandbox</h2>
+        <p class="section-desc">Click the simulated diagnostic actions below to see how I inspect database records and parse server error logs during an L1 triage incident.</p>
+      </div>
+
+      <div class="sandbox-container">
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" onclick="switchTab('sql-tab', this)">🗄️ SQL Database Triage</button>
+          <button class="sandbox-tab" onclick="switchTab('bash-tab', this)">💻 Terminal & Log Grep</button>
+          <button class="sandbox-tab" onclick="switchTab('sla-tab', this)">🎫 L1 SLA & Ticket Workflow</button>
+        </div>
+
+        <div class="sandbox-body">
+          <!-- SQL Tab -->
+          <div id="sql-tab" class="tab-pane active">
+            <div class="command-buttons">
+              <button class="cmd-btn" onclick="runSqlQuery('account')">▶ Query 1: Verify Account Status</button>
+              <button class="cmd-btn" onclick="runSqlQuery('failed_orders')">▶ Query 2: Inspect Failed Transactions</button>
+              <button class="cmd-btn" onclick="runSqlQuery('error_summary')">▶ Query 3: Aggregate 24h Error Codes</button>
+            </div>
+            <div class="terminal-window" id="sql-output">
+              <div class="prompt-row">
+                <span class="prompt-sign">saas_db=#</span>
+                <span>SELECT u.id, u.email, u.company_name, u.plan, u.status FROM users u WHERE u.email = 'enterprise.client@globex.com';</span>
+              </div>
+              <table class="sql-table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>email</th>
+                    <th>company_name</th>
+                    <th>plan</th>
+                    <th>status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10492</td>
+                    <td>enterprise.client@globex.com</td>
+                    <td>Globex International</td>
+                    <td>Enterprise Platinum</td>
+                    <td><span class="badge-ok">ACTIVE</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(1 row in 0.04ms) - Account validated. Ready for escalation verification.</div>
+            </div>
+          </div>
+
+          <!-- Bash Tab -->
+          <div id="bash-tab" class="tab-pane">
+            <div class="command-buttons">
+              <button class="cmd-btn" onclick="runBashCmd('tail')">▶ tail -n 5 /var/log/nginx/access.log</button>
+              <button class="cmd-btn" onclick="runBashCmd('grep500')">▶ grep -i "500 Internal" /var/log/app.log | head -n 3</button>
+              <button class="cmd-btn" onclick="runBashCmd('curl')">▶ curl -I https://api.saasapp.com/health</button>
+            </div>
+            <div class="terminal-window" id="bash-output">
+              <div class="prompt-row">
+                <span class="prompt-sign">support@runner-01:~$</span>
+                <span>tail -n 5 /var/log/nginx/access.log</span>
+              </div>
+              <div style="color: #94a3b8; line-height: 1.8;">
+                [2026-10-14 20:14:02] 198.51.100.24 "GET /v1/organizations/10492/billing HTTP/1.1" 200 4122<br>
+                [2026-10-14 20:14:05] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+                [2026-10-14 20:14:09] 203.0.113.88 "GET /v1/dashboard/metrics HTTP/1.1" 200 8920<br>
+                [2026-10-14 20:14:12] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+                [2026-10-14 20:14:15] 203.0.113.88 "GET /v1/users/me HTTP/1.1" 200 1204
+              </div>
+              <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Diagnostic Note]: 500 status code isolated to /v1/integrations/webhook/sync endpoint for tenant ID 10492. Reproduction steps documented for L2 Engineering.</div>
+            </div>
+          </div>
+
+          <!-- SLA Tab -->
+          <div id="sla-tab" class="tab-pane">
+            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.8;">
+              <h4 style="color: #38bdf8; margin-bottom: 8px;">My High-Volume L1 Ticket Resolution Process:</h4>
+              <ol style="padding-left: 20px; margin-bottom: 14px;">
+                <li><strong>Rapid First Response (&lt;15 mins):</strong> Acknowledge receipt in empathetic English, rephrase the customer's problem to confirm understanding.</li>
+                <li><strong>Variable Isolation:</strong> Verify whether the issue is tenant-specific, credential-related, or platform-wide via status dashboards.</li>
+                <li><strong>Database & Log Inspection:</strong> Check database state via SQL and query error codes in terminal logs.</li>
+                <li><strong>Clean L2 Escalation:</strong> If a backend bug is confirmed, package account ID, timestamp, HAR file, and reproduction steps in Jira so engineers don't waste time re-asking.</li>
+                <li><strong>High Queue Stamina:</strong> Maintain focus through 50+ tickets/day with organized macros and calm professionalism.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Skills Matrix -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Core Skills & Tooling</h2>
+        <p class="section-desc">Grounded technical skills developed through intensive bootcamp training and daily practical application.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3 class="skill-title">Language & Comms</h3>
+          <ul class="skill-list">
+            <li>Fluent English (Verbal & Written)</li>
+            <li>Native Thai</li>
+            <li>Cross-cultural client empathy</li>
+            <li>De-escalation & patient guidance</li>
+            <li>Technical documentation writing</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h3 class="skill-title">Databases & SQL</h3>
+          <ul class="skill-list">
+            <li>SELECT, WHERE, ORDER BY, LIMIT</li>
+            <li>Multi-table INNER / LEFT JOINs</li>
+            <li>GROUP BY, HAVING, Aggregations</li>
+            <li>Diagnosing missing or corrupt records</li>
+            <li>SQLite, PostgreSQL query syntax</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3 class="skill-title">Scripting & CLI (Learning)</h3>
+          <ul class="skill-list">
+            <li>Bash terminal navigation & file checks</li>
+            <li>Grep, tail -f, head log parsing</li>
+            <li>Python syntax & basic automation</li>
+            <li>Git version control basics</li>
+            <li>REST API testing (curl basics)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3 class="skill-title">Data & Support Tools</h3>
+          <ul class="skill-list">
+            <li>Google Sheets & Excel formulas</li>
+            <li>Microsoft Power BI (Certified)</li>
+            <li>Tableau Public dashboards</li>
+            <li>Ticketing / SLA workflows</li>
+            <li>Canva visual communications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials & Certifications Gallery -->
+    <section id="certs">
+      <div class="section-header">
+        <span class="section-tag">Verified Credentials</span>
+        <h2 class="section-title">Certifications & Official Awards</h2>
+        <p class="section-desc">Click any certificate below to view the official high-resolution document.</p>
+      </div>
+
+        <!-- DataRockie Official Electronic Credential -->
+        <div class="cert-card" onclick="openModal('images/cert_datarockie_bootcamp12.png', 'Official Electronic Certificate - Data Science Bootcamp Batch 12 (Top 20% Rank, Cert ID: 560b1fe0-3a78-490f-8188-3077e2c890c9)')">
+          <div class="cert-thumb">
+            <img src="images/cert_datarockie_bootcamp12.png" alt="DataRockie Batch 12 Certificate">
+            <span class="cert-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Top 20% Mastered</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Data Science Bootcamp (Batch 12)</h3>
+              <p class="cert-issuer">The School of Generalist / DataRockie</p>
+              <p class="cert-desc">240 exam questions • 100+ learning hours • Top 20% ranking. Verified: <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank" style="color: #38bdf8; text-decoration: underline;">View Online Credential ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Power BI -->
+        <div class="cert-card" onclick="openModal('images/cert_powerbi_microsoft.png', 'Power BI for Beginners - Microsoft Thailand & Thai MOOC (Awarded to นูรไลลา ตะฮาวัน)')">
+          <div class="cert-thumb">
+            <img src="images/cert_powerbi_microsoft.png" alt="Power BI Certificate">
+            <span class="cert-badge">Microsoft Thailand</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Power BI for Beginners</h3>
+              <p class="cert-issuer">Microsoft Thailand & Thai MOOC</p>
+              <p class="cert-desc">Official certificate awarded for passing online assessment in business intelligence and data modeling.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- US Embassy Appreciation -->
+        <div class="cert-card" onclick="openModal('images/cert_usembassy.jpg', 'Certificate of Appreciation - U.S. Embassy Bangkok (American Corner Yala)')">
+          <div class="cert-thumb">
+            <img src="images/cert_usembassy.jpg" alt="US Embassy Certificate">
+            <span class="cert-badge">U.S. Embassy Bangkok</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Certificate of Appreciation</h3>
+              <p class="cert-issuer">U.S. Embassy Bangkok (American Corner)</p>
+              <p class="cert-desc">Awarded by Assistant Cultural Affairs Officer Deb Mak in recognition of bilingual volunteering and cross-cultural coordination.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DataRockie Scholarship Story -->
+        <div class="cert-card" onclick="openModal('images/datarockie_scholarship_story.png', 'Data Science Bootcamp Batch 12 Scholarship & Crash Course Certifications (SQL, Sheets, R)')">
+          <div class="cert-thumb">
+            <img src="images/datarockie_scholarship_story.png" alt="DataRockie Scholarship Story">
+            <span class="cert-badge">DataRockie School</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Bootcamp Scholarship & Courses</h3>
+              <p class="cert-issuer">DataRockie (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Awarded full scholarship for 100+ hours training covering SQL, Spreadsheets, R, Python, and data pipelines.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- YRU Archery -->
+        <div class="cert-card" onclick="openModal('images/cert_yru_archery.png', 'YRU Archery Club Certificate - นูรไลลา ตะฮาวัน (Vice President & Tournament Coordinator)')">
+          <div class="cert-thumb">
+            <img src="images/cert_yru_archery.png" alt="YRU Archery Club Certificate">
+            <span class="cert-badge">YRU Archery Club</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Leadership & Tournament Operations</h3>
+              <p class="cert-issuer">YRU Archery Club & Robinhood Games</p>
+              <p class="cert-desc">Official recognition for tournament organization, operations, and translating international safety rules.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- AGSA Volunteers -->
+        <div class="cert-card" onclick="openModal('images/cert_agsa_committee.jpg', 'Assalam Graduate & Student Association (A.G.S.A) Committee Certificate')">
+          <div class="cert-thumb">
+            <img src="images/cert_agsa_committee.jpg" alt="AGSA Certificate">
+            <span class="cert-badge">A.G.S.A Association</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Association Committee Certificate</h3>
+              <p class="cert-issuer">Assalam Institute / Fatoni University</p>
+              <p class="cert-desc">Certifying committee leadership, online workshop logistics, and cross-provincial student coordination.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Call to Action -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2 class="contact-title">Let's Connect & Build Together</h2>
+        <p class="contact-subtitle">
+          Ready to provide reliable, bilingual L1 technical support for global enterprise customers. Fast learner, disciplined for 100% remote work, and excited to support your team.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:nurlaila.thw@gmail.com" class="contact-item">
+            <span>✉️</span>
+            <span>nurlaila.thw@gmail.com</span>
+          </a>
+          <button class="contact-item" onclick="copyEmail()" style="cursor: pointer; border: 1px solid #3b82f6;">
+            <span>📋</span>
+            <span id="copy-btn-text">Copy Email Address</span>
+          </button>
+          <a href="https://github.com/nurlailathw-jpg" target="_blank" class="contact-item">
+            <span>🐙</span>
+            <span>github.com/nurlailathw-jpg</span>
+          </a>
+          <a href="tel:+66807128297" class="contact-item">
+            <span>📞</span>
+            <span>+66 80 712 8297</span>
+          </a>
+          <a href="https://nurlailatahawan.wordpress.com/" target="_blank" class="contact-item">
+            <span>📝</span>
+            <span>nurlailatahawan.wordpress.com</span>
+          </a>
+        </div>
+
+        <div class="signature-area">
+          <img src="images/signature.png" alt="Nurlaila Tahawan Signature">
+          <span class="signature-label">Nurlaila Tahawan — Satun, Thailand (UTC+7)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Lightbox -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img id="modal-img-tag" src="" alt="Certificate" class="modal-img">
+      <div id="modal-caption-tag" class="modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Nurlaila Tahawan. Designed for L1 Support & Technical Data Roles. Hosted with pride.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Switching
+    function switchTab(tabId, element) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sandbox-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+
+    // SQL Simulation
+    function runSqlQuery(type) {
+      const output = document.getElementById('sql-output');
+      if (type === 'account') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT u.id, u.email, u.company_name, u.plan, u.status FROM users u WHERE u.email = 'enterprise.client@globex.com';</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>id</th><th>email</th><th>company_name</th><th>plan</th><th>status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>10492</td><td>enterprise.client@globex.com</td><td>Globex International</td><td>Enterprise Platinum</td><td><span class="badge-ok">ACTIVE</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(1 row in 0.04ms) - Account validated. Ready for escalation verification.</div>
+        `;
+      } else if (type === 'failed_orders') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT o.order_id, o.user_id, o.amount, o.status, o.error_reason, o.created_at FROM orders o WHERE o.user_id = 10492 ORDER BY o.created_at DESC LIMIT 3;</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>order_id</th><th>user_id</th><th>amount</th><th>status</th><th>error_reason</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ORD-99120</td><td>10492</td><td>$4,500.00</td><td><span class="badge-error">FAILED</span></td><td>Webhook Gateway Timeout (504)</td></tr>
+              <tr><td>ORD-88210</td><td>10492</td><td>$4,500.00</td><td><span class="badge-ok">SUCCESS</span></td><td>None</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Triage]: Isolated to webhook timeout on ORD-99120. Customer can be advised while payment gateway sync is inspected.</div>
+        `;
+      } else if (type === 'error_summary') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT error_code, COUNT(*) AS occurrences FROM api_logs WHERE created_at >= NOW() - INTERVAL '24 HOURS' GROUP BY error_code ORDER BY occurrences DESC;</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>error_code</th><th>occurrences</th><th>severity</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>401_UNAUTHORIZED</td><td>1,420</td><td><span class="badge-ok">Normal (Expired sessions)</span></td></tr>
+              <tr><td>404_NOT_FOUND</td><td>310</td><td><span class="badge-ok">Low</span></td></tr>
+              <tr><td>500_INTERNAL_SERVER</td><td>14</td><td><span class="badge-error">P1 Engineering Alert</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(3 rows in 0.09ms) - 14 critical 500 errors identified within the last 24 hours.</div>
+        `;
+      }
+    }
+
+    // Bash Simulation
+    function runBashCmd(type) {
+      const output = document.getElementById('bash-output');
+      if (type === 'tail') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>tail -n 5 /var/log/nginx/access.log</span></div>
+          <div style="color: #94a3b8; line-height: 1.8;">
+            [2026-10-14 20:14:02] 198.51.100.24 "GET /v1/organizations/10492/billing HTTP/1.1" 200 4122<br>
+            [2026-10-14 20:14:05] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+            [2026-10-14 20:14:09] 203.0.113.88 "GET /v1/dashboard/metrics HTTP/1.1" 200 8920<br>
+            [2026-10-14 20:14:12] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+            [2026-10-14 20:14:15] 203.0.113.88 "GET /v1/users/me HTTP/1.1" 200 1204
+          </div>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Triage]: Streaming live logs captured repeated 500 status on /v1/integrations/webhook/sync.</div>
+        `;
+      } else if (type === 'grep500') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>grep -i "500 Internal" /var/log/app.log | head -n 3</span></div>
+          <div style="color: #f87171; line-height: 1.8; font-size: 0.82rem;">
+            [ERROR] 2026-10-14T20:14:05Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.<br>
+            [ERROR] 2026-10-14T20:14:12Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.<br>
+            [ERROR] 2026-10-14T20:14:19Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.
+          </div>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[Root Cause Isolated]: Database connection pool exhaustion. Packaged into engineering escalation ticket.</div>
+        `;
+      } else if (type === 'curl') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>curl -I https://api.saasapp.com/health</span></div>
+          <div style="color: #cbd5e1; line-height: 1.8;">
+            HTTP/2 <span class="badge-ok">200</span><br>
+            content-type: application/json; charset=utf-8<br>
+            date: Wed, 14 Oct 2026 21:30:00 GMT<br>
+            x-response-time: 14ms<br>
+            {"status": "UP", "database": "CONNECTED", "latency": "12ms"}
+          </div>
+          <div style="margin-top: 10px; color: #10b981; font-size: 0.8rem;">[Verification]: API gateway and healthcheck endpoint responding 200 OK.</div>
+        `;
+      }
+    }
+
+    // Modal Lightbox
+    function openModal(imgSrc, captionText) {
+      document.getElementById('modal-img-tag').src = imgSrc;
+      document.getElementById('modal-caption-tag').innerText = captionText;
+      document.getElementById('image-modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('image-modal').classList.remove('active');
+    }
+
+    // Copy Email
+    function copyEmail() {
+      navigator.clipboard.writeText('nurlaila.thw@gmail.com').then(() => {
+        const btn = document.getElementById('copy-btn-text');
+        btn.innerText = 'Copied to Clipboard! ✓';
+        setTimeout(() => {
+          btn.innerText = 'Copy Email Address';
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
