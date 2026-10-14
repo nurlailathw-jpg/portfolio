@@ -34,11 +34,22 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 
 ---
 
-## KEY PROJECT
+## TECHNICAL PROJECTS & CASE STUDIES
 
-**R Markdown Data Analysis & Tech Blog** | [View Project](https://lifesmissingmamual.wordpress.com/)
-* Authored technical storytelling articles detailing personal learning milestones in data, SQL, and IT tools.
-* Cleaned raw datasets, conducted exploratory data analysis, and generated reproducible visual reports using R and Markdown.
+**Relational Database SQL Triage (Chinook Project)** | [View Notion Case Study](https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55)
+* Wrote complex multi-table SQL queries joining up to 5 relational tables (`customers`, `invoices`, `employees`, `tracks`, `genres`).
+* Mapped customer accounts directly to assigned support representatives via `SupportRepId` to inspect account status and spending patterns.
+* Executed data filtering (`WHERE`, `IN`, `LIKE`), grouping (`GROUP BY`), and aggregations (`SUM`, `COUNT`) to troubleshoot business records.
+
+**Regex Text Parser & Date Normalizer** | [View Notion Case Study](https://chip-curler-7a4.notion.site/Project-ID-Card-Parser-TH-to-EN-Date-3ec7c0a9a17a80b39f56eb9efa1382f8)
+* Engineered text parsing workflows using Regular Expressions (`REGEXEXTRACT`, `REGEXMATCH`, `REGEXREPLACE`) to parse unstructured strings into structured fields.
+* Formulated date normalization logic, converting non-standard Thai Buddhist Era dates into international ISO standard date formats.
+
+**Dynamic Query & Boolean Filtering System** | [View Notion Case Study](https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a)
+* Built dynamic database queries with parameter controls, enforcing boolean logic operator precedence (`(A OR B) AND C`) for accurate record retrieval.
+
+**Technical Storytelling & Data Blog** | [nurlailatahawan.wordpress.com](https://nurlailatahawan.wordpress.com/)
+* Documented personal technical journey, SQL data models, and reproducible data workflows using R Markdown and WordPress.
 
 ---
 

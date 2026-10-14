@@ -31,6 +31,7 @@ Email: nurlaila.thw@gmail.com
 GitHub: https://github.com/nurlailathw-jpg
 Website: https://nurlailatahawan.wordpress.com/
 Verified Credential: https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9
+SQL Project on Notion: https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55
 ```
 
 ---
@@ -45,7 +46,8 @@ Verified Credential: https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8
 
 ขอเล่าตามตรงแบบไม่อวยนะคะ:
 - ด้านภาษาอังกฤษ: นูรจบ ป.ตรี เอกภาษาอังกฤษค่ะ สื่อสาร ฟัง พูด อ่าน เขียน กับชาวต่างชาติได้คล่อง ไม่เกร็ง และอธิบายเรื่องยากๆ ให้เข้าใจง่ายได้ค่ะ
-- ด้านเทคนิค: ได้รับทุนเรียนจบ Bootcamp Data Science (DataRockie รุ่น 12) มีพื้นฐานเขียน SQL query ข้อมูลได้ดี (JOINs, ตรวจสอบข้อมูล) และตอนนี้กำลังศึกษาเพิ่มเติมเรื่องการเขียน script ด้วย Python กับคำสั่ง Bash บน Terminal อย่างจริงจังค่ะ
+- ด้านเทคนิค: ได้รับทุนเรียนจบ Bootcamp Data Science (DataRockie รุ่น 12 ติด Top 20%) มีพื้นฐานเขียน SQL query ข้อมูลได้ดี (JOINs, ตรวจสอบข้อมูล) และตอนนี้กำลังศึกษาเพิ่มเติมเรื่องการเขียน script ด้วย Python กับคำสั่ง Bash บน Terminal อย่างจริงจังค่ะ
+- ผลงานที่เปิดดูได้ทันที: มีเขียนเคสวิเคราะห์ฐานข้อมูล SQL (Chinook Project เชื่อมตารางลูกค้ากับ Support Reps) และโปรเจกต์ Regex Parser สรุปไว้บน Notion ตรวจสอบฝีมือจริงได้เลยค่ะ: https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55
 - จุดเริ่มต้นสาย IT: นูรมีพี่สาวทำงานสาย IT และแนะนำเรื่องงาน Remote Work ในสายเทค ทำให้สนใจและฝึกฝนตัวเองด้านนี้มาโดยตลอดค่ะ
 - ทัศนคติการทำงาน: เป็นเด็กจบใหม่ที่สู้งานหนัก ทราบดีว่างาน L1 ต้องเจอ Ticket เยอะและมีความกดดัน พร้อมอดทนและตั้งใจเรียนรู้ระบบของบริษัทให้เร็วที่สุดค่ะ
 - ความพร้อม: มีคอมพิวเตอร์และอินเทอร์เน็ตพร้อม ทำงาน Remote 100% ได้เต็มเวลาค่ะ

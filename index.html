@@ -551,6 +551,93 @@
       font-weight: bold;
     }
 
+    /* Projects & Notion Case Studies Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .project-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .project-box:hover {
+      border-color: #3b82f6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+      font-family: var(--font-mono);
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .project-code-box {
+      background: #060a14;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+
+    .btn-notion {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .btn-notion:hover {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
     /* Certifications Grid */
     .certs-grid {
       display: grid;
@@ -814,6 +901,7 @@
         <ul>
           <li><a href="#about">Story</a></li>
           <li><a href="#demos">Diagnostics</a></li>
+          <li><a href="#projects">Case Studies</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#certs">Certificates</a></li>
           <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
@@ -983,6 +1071,79 @@
               </ol>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Technical Case Studies on Notion -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-tag">Verified Coursework & Proof of Work</span>
+        <h2 class="section-title">Live Technical Case Studies (Notion)</h2>
+        <p class="section-desc">Real hands-on assignments and projects completed during my technical training, featuring relational database joins, regex parsing, and dynamic queries.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Chinook Database -->
+        <div class="project-box">
+          <div>
+            <span class="project-tag">SQL Database • 5-Table Joins</span>
+            <h3 class="project-title">Chinook Database SQL Analysis</h3>
+            <p class="project-desc">
+              Relational query analysis mapping high-spending customer accounts directly to assigned sales and support representatives via <code>SupportRepId</code>. Conducted multi-table joins across 5 tables with aggregations and filtering.
+            </p>
+            <div class="project-code-box">
+SELECT c.CustomerId, c.FirstName || ' ' || c.LastName AS Customer_Name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.FirstName || ' ' || e.LastName AS Support_Rep, SUM(i.Total) AS Total_Spent<br>
+FROM customers c<br>
+INNER JOIN invoices i ON c.CustomerId = i.CustomerId<br>
+INNER JOIN employees e ON c.SupportRepId = e.EmployeeId<br>
+GROUP BY c.CustomerId, Customer_Name, Support_Rep<br>
+ORDER BY Total_Spent DESC LIMIT 5;
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55" target="_blank" class="btn-notion">
+            <span>📖 Read Full Notion Case Study ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 2: ID Card Parser & Regex -->
+        <div class="project-box">
+          <div>
+            <span class="project-tag">Regex • Data Cleaning • Normalization</span>
+            <h3 class="project-title">Text Parser & Thai-to-EN Date Normalizer</h3>
+            <p class="project-desc">
+              Extracted structured identification numbers, names, and addresses from unstructured messy string blobs using Regular Expressions. Formulated date normalization logic converting Thai Buddhist Era dates into standard international ISO format.
+            </p>
+            <div class="project-code-box">
+=REGEXEXTRACT(raw_text, "\d{13}")<br>
+=REGEXMATCH(text, "^[PM]")<br>
+=REGEXREPLACE(thai_date, "(\d{2})\s+([^\s]+)\s+(\d{4})", ...)<br>
+-- Cleaned messy client inputs into structured ISO records
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Project-ID-Card-Parser-TH-to-EN-Date-3ec7c0a9a17a80b39f56eb9efa1382f8" target="_blank" class="btn-notion">
+            <span>📖 Read Regex Breakdown on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 3: Dynamic Query & Boolean Logic -->
+        <div class="project-box">
+          <div>
+            <span class="project-tag">Dynamic Query • Boolean Precedence</span>
+            <h3 class="project-title">Dynamic Querying & Logic Precedence</h3>
+            <p class="project-desc">
+              Engineered dynamic data filtering models with dropdown inputs. Solved critical boolean operator precedence rules <code>(A OR B) AND C</code> to prevent logic leakage during data extraction and sales reporting.
+            </p>
+            <div class="project-code-box">
+=QUERY(Sale_Transactions, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SELECT A, B, C, D, H WHERE (D='West' OR D='South') AND H >= 1000")<br>
+-- Enforced boolean parentheses precedence to isolate accurate records
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a" target="_blank" class="btn-notion">
+            <span>📖 Read Query Guide on Notion ↗</span>
+          </a>
         </div>
       </div>
     </section>
