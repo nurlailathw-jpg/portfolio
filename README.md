@@ -44,24 +44,25 @@ my_resume/
 │   ├── Portfolio_Link_&_Overview.md        # Portfolio links & social links
 │   └── Project_Summaries.md                # Detailed project descriptions
 │
-├── Certificates_&_Credentials/          # Verified Certificates & Diplomas
-│   ├── Cert_Bootcamp_DataRockie_Batch12.png   # Data Science Bootcamp Completion Card (Top 20%)
-│   ├── CEFR_English_Certificate.pdf          # CEFR English Proficiency Certificate
-│   ├── certificate-of-completion-for-sql-crash-course.pdf
-│   ├── certificate-of-completion-for-google-sheets-crash-course.pdf
-│   ├── r Crash Crouse .pdf
-│   ├── Transcript Eng..pdf                   # Official University Transcript (English)
-│   ├── เกียรติบัตรต่างๆ/                     # Official certificates (U.S. Embassy, Microsoft Power BI, etc.)
-│   └── Other_Credentials/                   # Extracurricular & athletic credentials
+├── Certificates_&_Credentials/          # Verified Certificates & Original Credentials
+│   ├── 01_Computer_&_Technical/               # SQL, Sheets, R, Word, PowerPoint, Web Blog
+│   ├── 02_Languages_&_Teaching/               # CEFR English, Transcripts, Teaching credentials
+│   ├── 03_Volunteers_&_Activities/            # U.S. Embassy, Archery, Scouting, Extracurriculars
+│   └── 04_Raw_Archives_Zip/                   # Drive backup zip archives
 │
-├── images/                              # Web Assets used by index.html
-│   ├── cert_datarockie_bootcamp12.png      # DataRockie completion card
-│   ├── cert_powerbi_microsoft.png          # Microsoft Power BI certificate
-│   ├── cert_usembassy.jpg                  # U.S. Embassy Bangkok Appreciation certificate
-│   ├── cert_yru_archery.png                # YRU Archery Club leadership certificate
-│   ├── cert_agsa_committee.jpg             # A.G.S.A Association certificate
-│   ├── datarockie_scholarship_story.png    # DataRockie scholarship blog post image
-│   └── signature.png                       # Digital signature
+├── images/                              # High-Res Web Assets used by index.html
+│   ├── cert_datarockie_bootcamp12.png         # DataRockie completion card (Top 20% Mastered)
+│   ├── cert_sql_crash_course.png              # SQL Crash Course Certificate
+│   ├── cert_googlesheets_crash_course.png     # Google Sheets Crash Course Certificate
+│   ├── cert_r_crash_course.png                # R Programming Crash Course Certificate
+│   ├── cert_ms_word.jpg                       # Microsoft Word 2013 Advanced Certificate
+│   ├── cert_ms_powerpoint.jpg                 # Microsoft PowerPoint Presentation Certificate
+│   ├── cert_web_development.png               # WordPress & R Markdown Technical Blog
+│   ├── cert_usembassy.jpg                     # U.S. Embassy Bangkok Appreciation certificate
+│   ├── cert_yru_archery.png                   # YRU Archery Club leadership certificate
+│   ├── cert_agsa_committee.jpg                # A.G.S.A Association certificate
+│   ├── datarockie_scholarship_story.png       # DataRockie scholarship story image
+│   └── signature.png                          # Digital signature
 │
 ├── Assets_&_Photos/                     # Raw photos and signatures
 │   ├── Standard_Signature.png

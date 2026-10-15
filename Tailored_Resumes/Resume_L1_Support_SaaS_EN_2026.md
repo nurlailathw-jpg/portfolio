@@ -12,7 +12,7 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 * **Languages:** Thai (Native), English (Fluent – verbal communication, technical reading, and professional writing).
 * **Databases & Querying:** SQL (Foundational & Intermediate: `SELECT`, `WHERE`, `JOIN`, `GROUP BY`, data filtering, sorting, diagnosing database record discrepancies).
 * **Scripting & Command Line:** Python & Bash (Actively Learning / Foundational: script syntax, basic terminal navigation, file inspection, running automation commands).
-* **Tools & Software:** Spreadsheets (Google Sheets / Excel), Microsoft Power BI, Git (basic version control), Canva, Microsoft Office.
+* **Tools & Software:** Spreadsheets (Google Sheets / Excel), Microsoft Office (Word, PowerPoint), Git (basic version control), Canva.
 * **Support & Soft Skills:** Active Listening, Problem Diagnosis, Clear & Patient Explanations, High Workload / Ticket Queue Stamina, Coachable & Fast Learner, 100% Remote Work Discipline.
 
 ---
@@ -25,10 +25,12 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 * Wrote SQL queries on relational databases to extract, filter, and inspect data records.
 * Actively continuing self-study in Python and Bash scripting to automate repetitive tasks and navigate Unix command-line environments.
 
-**Official Certifications:**
-* **Certificate of Completion: SQL Crash Course** – DataRockie School
-* **Certificate of Completion: Google Sheets Crash Course** – DataRockie School
-* **Certificate of Completion: R Crash Course** – DataRockie School
+**Official Technical Certifications:**
+* **Certificate of Completion: SQL Crash Course** – DataRockie School (Cert No: `cert_650yhcyI`)
+* **Certificate of Completion: Google Sheets Crash Course** – DataRockie School (Cert No: `cert_0z932crs`)
+* **Certificate of Completion: R Crash Course** – DataRockie School (Cert No: `cert_z8cpdfsm`)
+* **Advanced Microsoft Word Certification (18 Hours)** – Witayaput School
+* **Microsoft PowerPoint Presentation Course** – Satun Provincial Administrative Organization
 * **Volunteer Appreciation Recognition** – Awarded by U.S. Embassy Bangkok (American Corner Yala)
 * **Basic Teaching License** – Ministry of Education, Thailand
 

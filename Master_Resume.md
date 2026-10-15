@@ -12,7 +12,7 @@ Dedicated bilingual professional (Fluent English / Native Thai) with a Bachelor'
 * **Languages:** Thai (Native), English (Fluent – verbal communication, technical reading, and professional writing).
 * **Databases & Querying:** SQL (Foundational & Intermediate: `SELECT`, `WHERE`, `JOIN`, `GROUP BY`, data filtering, sorting, diagnosing database records).
 * **Scripting & Command Line:** Python & Bash (Actively Learning / Foundational: script syntax, basic file operations, terminal navigation, running diagnostic commands).
-* **BI & Data Tools:** Spreadsheets (Google Sheets / Excel), Microsoft Power BI (Certified for Beginners), Tableau Public, R Programming.
+* **BI & Data Tools:** Spreadsheets (Google Sheets / Excel), Tableau Public, R Programming, Microsoft Office.
 * **Support & Operations:** L1 Incident Triage, Ticket Queue Management, SLA Adherence Mindset, Bug Reproduction, Knowledge Base Authoring, Customer Empathy, De-escalation.
 * **Remote Work Discipline:** Self-motivated, dedicated home office setup with high-speed internet, experienced in asynchronous and cross-timezone collaboration.
 
@@ -32,11 +32,12 @@ Dedicated bilingual professional (Fluent English / Native Thai) with a Bachelor'
 
 ## Certifications & Credentials
 
-* **Data Science Bootcamp (Batch 12) – Scholarship Recipient** | *DataRockie School (Kasidis Satangmongkol)* | *2023 – 2026*
+* **Data Science Bootcamp (Batch 12) – Scholarship Recipient (Top 20% Mastered)** | *DataRockie School (Kasidis Satangmongkol)* | *2023 – 2026*
 * **Certificate of Completion: SQL Crash Course** | *DataRockie School* | *Oct 2025*
 * **Certificate of Completion: Google Sheets Crash Course** | *DataRockie School* | *Oct 2025*
 * **Certificate of Completion: R Crash Course** | *DataRockie School* | *Nov 2025*
-* **Power BI for Beginners (2 Hours)** | *Microsoft Thailand & Thai MOOC* | *Dec 2025*
+* **Microsoft Word 2013 Advanced (18 Hours)** | *Witayaput School*
+* **Microsoft PowerPoint Presentation Course** | *Satun Provincial Administrative Organization & Thaicom School*
 * **Certificate of Appreciation (Volunteering)** | *U.S. Embassy Bangkok (American Corner Yala)* | *Deb Mak, Assistant Cultural Affairs Officer*
 * **Basic Teaching License** | *Teachers' Council of Thailand / Ministry of Education*
 * **A.G.S.A Committee Certificate** | *Assalam Graduate & Student Association* | *May 2022*

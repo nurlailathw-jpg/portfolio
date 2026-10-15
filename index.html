@@ -638,6 +638,34 @@
       border-color: #2563eb;
     }
 
+    /* Certifications Filter Buttons */
+    .cert-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .cert-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cert-filter-btn:hover, .cert-filter-btn.active {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+    }
+
     /* Certifications Grid */
     .certs-grid {
       display: grid;
@@ -1198,8 +1226,8 @@ ORDER BY Total_Spent DESC LIMIT 5;
           <h3 class="skill-title">Data & Support Tools</h3>
           <ul class="skill-list">
             <li>Google Sheets & Excel formulas</li>
-            <li>Microsoft Power BI (Certified)</li>
-            <li>Tableau Public dashboards</li>
+            <li>SQL Database Querying (JOINs & Triage)</li>
+            <li>Microsoft Office (Word & PowerPoint)</li>
             <li>Ticketing / SLA workflows</li>
             <li>Canva visual communications</li>
           </ul>
@@ -1212,11 +1240,19 @@ ORDER BY Total_Spent DESC LIMIT 5;
       <div class="section-header">
         <span class="section-tag">Verified Credentials</span>
         <h2 class="section-title">Certifications & Official Awards</h2>
-        <p class="section-desc">Click any certificate below to view the official high-resolution document.</p>
+        <p class="section-desc">Click any certificate below to inspect the verified high-resolution document.</p>
       </div>
 
-        <!-- DataRockie Official Electronic Credential -->
-        <div class="cert-card" onclick="openModal('images/cert_datarockie_bootcamp12.png', 'Official Electronic Certificate - Data Science Bootcamp Batch 12 (Top 20% Rank, Cert ID: 560b1fe0-3a78-490f-8188-3077e2c890c9)')">
+      <!-- Filter Controls -->
+      <div class="cert-filters">
+        <button class="cert-filter-btn active" onclick="filterCerts('all', this)">All Credentials (11)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('tech', this)">💻 Computer & Technical (8)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('leadership', this)">🤝 Leadership & Volunteer (3)</button>
+      </div>
+
+      <div class="certs-grid">
+        <!-- 1. DataRockie Bootcamp Batch 12 -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_datarockie_bootcamp12.png', 'Official Electronic Certificate - Data Science Bootcamp Batch 12 (Top 20% Rank, Cert ID: 560b1fe0-3a78-490f-8188-3077e2c890c9)')">
           <div class="cert-thumb">
             <img src="images/cert_datarockie_bootcamp12.png" alt="DataRockie Batch 12 Certificate">
             <span class="cert-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Top 20% Mastered</span>
@@ -1225,28 +1261,118 @@ ORDER BY Total_Spent DESC LIMIT 5;
             <div>
               <h3 class="cert-title">Data Science Bootcamp (Batch 12)</h3>
               <p class="cert-issuer">The School of Generalist / DataRockie</p>
-              <p class="cert-desc">240 exam questions • 100+ learning hours • Top 20% ranking. Verified: <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank" style="color: #38bdf8; text-decoration: underline;">View Online Credential ↗</a></p>
+              <p class="cert-desc">240 assessment questions • 100+ learning hours • Top 20% ranking. Skills: SQL, Python, R, Spreadsheets, Automation. <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank" style="color: #38bdf8; text-decoration: underline;">Verify Credential ↗</a></p>
             </div>
           </div>
         </div>
 
-        <!-- Power BI -->
-        <div class="cert-card" onclick="openModal('images/cert_powerbi_microsoft.png', 'Power BI for Beginners - Microsoft Thailand & Thai MOOC (Awarded to นูรไลลา ตะฮาวัน)')">
+        <!-- 2. SQL Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_sql_crash_course.png', 'Certificate of Completion: SQL Crash Course - DataRockie School (Cert No: cert_650yhcyI)')">
           <div class="cert-thumb">
-            <img src="images/cert_powerbi_microsoft.png" alt="Power BI Certificate">
-            <span class="cert-badge">Microsoft Thailand</span>
+            <img src="images/cert_sql_crash_course.png" alt="SQL Crash Course Certificate">
+            <span class="cert-badge" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">SQL Certified</span>
           </div>
           <div class="cert-info">
             <div>
-              <h3 class="cert-title">Power BI for Beginners</h3>
-              <p class="cert-issuer">Microsoft Thailand & Thai MOOC</p>
-              <p class="cert-desc">Official certificate awarded for passing online assessment in business intelligence and data modeling.</p>
+              <h3 class="cert-title">SQL Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Relational database querying, multi-table JOINs, data filtering, aggregations, and support diagnostic queries. Cert No: <code>cert_650yhcyI</code>.</p>
             </div>
           </div>
         </div>
 
-        <!-- US Embassy Appreciation -->
-        <div class="cert-card" onclick="openModal('images/cert_usembassy.jpg', 'Certificate of Appreciation - U.S. Embassy Bangkok (American Corner Yala)')">
+        <!-- 3. Google Sheets Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_googlesheets_crash_course.png', 'Certificate of Completion: Google Sheets Crash Course - DataRockie School (Cert No: cert_0z932crs)')">
+          <div class="cert-thumb">
+            <img src="images/cert_googlesheets_crash_course.png" alt="Google Sheets Crash Course Certificate">
+            <span class="cert-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);">Spreadsheets</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Google Sheets Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Advanced spreadsheet formulas, data cleaning, automated reporting, and customer issue tracking. Cert No: <code>cert_0z932crs</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. R Programming Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_r_crash_course.png', 'Certificate of Completion: R Crash Course - DataRockie School (Cert No: cert_z8cpdfsm)')">
+          <div class="cert-thumb">
+            <img src="images/cert_r_crash_course.png" alt="R Crash Course Certificate">
+            <span class="cert-badge" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">R Programming</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">R Programming Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Data manipulation, statistical analysis scripts, reproducible markdown reports, and data visualization. Cert No: <code>cert_z8cpdfsm</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Microsoft Word 2013 ขั้นสูง -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_ms_word.jpg', 'ใบประกาศนียบัตร: หลักสูตรวิชา Microsoft Word 2013 ขั้นสูง (18 ชั่วโมง) - โรงเรียนวิทยพัฒน์ หาดใหญ่ (เลขที่ 5714735)')">
+          <div class="cert-thumb">
+            <img src="images/cert_ms_word.jpg" alt="Microsoft Word Certificate">
+            <span class="cert-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">MS Word Advanced</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Microsoft Word 2013 ขั้นสูง</h3>
+              <p class="cert-issuer">โรงเรียนวิทยพัฒน์ (WITAYAPUT) หาดใหญ่</p>
+              <p class="cert-desc">สำเร็จหลักสูตรการจัดทำเอกสารขั้นสูง การจัดรูปแบบระบบ ฟอร์มมาตรฐาน และการจัดทำคู่มือ 18 ชั่วโมง (เลขที่ 5714735).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Microsoft PowerPoint -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_ms_powerpoint.jpg', 'เกียรติบัตร: หลักสูตรเรียนรู้โปรแกรมนำเสนอผลงานโดย PowerPoint - องค์การบริหารส่วนจังหวัดสตูล ร่วมกับ โรงเรียนไทยคอม')">
+          <div class="cert-thumb">
+            <img src="images/cert_ms_powerpoint.jpg" alt="Microsoft PowerPoint Certificate">
+            <span class="cert-badge" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">MS PowerPoint</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">โปรแกรมนำเสนอผลงาน PowerPoint</h3>
+              <p class="cert-issuer">อบจ.สตูล ร่วมกับ โรงเรียนไทยคอม</p>
+              <p class="cert-desc">สำเร็จหลักสูตรการออกแบบและนำเสนอผลงานคอมพิวเตอร์เพื่อการสื่อสารข้อมูลที่มีประสิทธิภาพ (ใบอนุญาตเลขที่ สข 2.170/2549).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Web Development & Tech Blog -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_web_development.png', 'Portfolio & Technical Blogging Platform (WordPress & R Markdown) - nurlailatahawan.wordpress.com')">
+          <div class="cert-thumb">
+            <img src="images/cert_web_development.png" alt="Web Development & Technical Blog">
+            <span class="cert-badge" style="color: #f472b6; border-color: rgba(244, 114, 182, 0.4);">Web & Tech Blog</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Personal Website & Tech Blog</h3>
+              <p class="cert-issuer">WordPress.com & R Markdown</p>
+              <p class="cert-desc">การพัฒนาเว็บไซต์พอร์ตโฟลิโอส่วนตัวและเก็บบันทึก Technical Articles เกี่ยวกับ R Markdown, SQL และเส้นทางการเรียนรู้ Data/Tech. <a href="https://nurlailatahawan.wordpress.com/" target="_blank" style="color: #38bdf8; text-decoration: underline;">Visit Blog ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. DataRockie Scholarship Story -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/datarockie_scholarship_story.png', 'Data Science Bootcamp Batch 12 Scholarship & Learning Journey - DataRockie')">
+          <div class="cert-thumb">
+            <img src="images/datarockie_scholarship_story.png" alt="DataRockie Scholarship Story">
+            <span class="cert-badge" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Full Scholarship</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Bootcamp Scholarship Story</h3>
+              <p class="cert-issuer">DataRockie (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">ได้รับคัดเลือกทุนการศึกษา 100+ ชั่วโมง ครอบคลุม SQL, Data Transformation, Python, Bash และการนำความรู้มาประยุกต์ใช้งานจริงในสาย Technical Support.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. US Embassy Appreciation -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_usembassy.jpg', 'Certificate of Appreciation - U.S. Embassy Bangkok (American Corner Yala)')">
           <div class="cert-thumb">
             <img src="images/cert_usembassy.jpg" alt="US Embassy Certificate">
             <span class="cert-badge">U.S. Embassy Bangkok</span>
@@ -1260,23 +1386,8 @@ ORDER BY Total_Spent DESC LIMIT 5;
           </div>
         </div>
 
-        <!-- DataRockie Scholarship Story -->
-        <div class="cert-card" onclick="openModal('images/datarockie_scholarship_story.png', 'Data Science Bootcamp Batch 12 Scholarship & Crash Course Certifications (SQL, Sheets, R)')">
-          <div class="cert-thumb">
-            <img src="images/datarockie_scholarship_story.png" alt="DataRockie Scholarship Story">
-            <span class="cert-badge">DataRockie School</span>
-          </div>
-          <div class="cert-info">
-            <div>
-              <h3 class="cert-title">Bootcamp Scholarship & Courses</h3>
-              <p class="cert-issuer">DataRockie (Kasidis Satangmongkol)</p>
-              <p class="cert-desc">Awarded full scholarship for 100+ hours training covering SQL, Spreadsheets, R, Python, and data pipelines.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- YRU Archery -->
-        <div class="cert-card" onclick="openModal('images/cert_yru_archery.png', 'YRU Archery Club Certificate - นูรไลลา ตะฮาวัน (Vice President & Tournament Coordinator)')">
+        <!-- 10. YRU Archery -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_yru_archery.png', 'YRU Archery Club Certificate - นูรไลลา ตะฮาวัน (Vice President & Tournament Coordinator)')">
           <div class="cert-thumb">
             <img src="images/cert_yru_archery.png" alt="YRU Archery Club Certificate">
             <span class="cert-badge">YRU Archery Club</span>
@@ -1290,8 +1401,8 @@ ORDER BY Total_Spent DESC LIMIT 5;
           </div>
         </div>
 
-        <!-- AGSA Volunteers -->
-        <div class="cert-card" onclick="openModal('images/cert_agsa_committee.jpg', 'Assalam Graduate & Student Association (A.G.S.A) Committee Certificate')">
+        <!-- 11. AGSA Volunteers -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_agsa_committee.jpg', 'Assalam Graduate & Student Association (A.G.S.A) Committee Certificate')">
           <div class="cert-thumb">
             <img src="images/cert_agsa_committee.jpg" alt="AGSA Certificate">
             <span class="cert-badge">A.G.S.A Association</span>
@@ -1477,6 +1588,20 @@ ORDER BY Total_Spent DESC LIMIT 5;
 
     function closeModal() {
       document.getElementById('image-modal').classList.remove('active');
+    }
+
+    // Filter Certificates by Category
+    function filterCerts(category, element) {
+      document.querySelectorAll('.cert-filter-btn').forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+      const cards = document.querySelectorAll('.cert-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
 
     // Copy Email
