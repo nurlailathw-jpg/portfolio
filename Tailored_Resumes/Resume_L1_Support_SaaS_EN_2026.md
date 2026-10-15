@@ -52,8 +52,11 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 **Dynamic Query & Boolean Filtering System** | [View Notion Case Study](https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a)
 * Built dynamic database queries with parameter controls, enforcing boolean logic operator precedence (`(A OR B) AND C`) for accurate record retrieval.
 
-**Technical Storytelling & Data Blog** | [nurlailatahawan.wordpress.com](https://nurlailatahawan.wordpress.com/)
-* Documented personal technical journey, SQL data models, and reproducible data workflows using R Markdown and WordPress.
+**Automated Reporting with R Markdown** | [View Notion Case Study](https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7)
+* Authored "Built a report with R" documenting automated reproducible data reporting pipelines using R Markdown, knitr, and ggplot2.
+
+**Data Analyst Portfolio (DataRockie School Batch 12)** | [View Notion Portfolio](https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64)
+* Comprehensive coursework portfolio covering 100+ hours of data analysis, SQL queries, and spreadsheet automation (Top 20% ranking).
 
 ---
 

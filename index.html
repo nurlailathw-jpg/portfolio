@@ -271,6 +271,7 @@
     /* Section Styling */
     section {
       padding: 70px 0;
+      scroll-margin-top: 80px;
     }
 
     .section-header {
@@ -911,6 +912,465 @@
         padding: 30px 20px;
       }
     }
+    /* ===================================================
+       Fastwork Pro & Modern Teen Tech Aesthetics
+       =================================================== */
+    .fastwork-badge-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .fastwork-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      transition: all 0.2s ease;
+    }
+
+    .fastwork-pill.verified {
+      background: rgba(37, 99, 235, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+    }
+
+    .fastwork-pill.online {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .fastwork-pill.rating {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+
+    .fastwork-pill.pro {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2));
+      color: #f472b6;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .fastwork-hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    /* Fastwork Pro Freelancer Profile Bento Card */
+    .fastwork-profile-card {
+      background: linear-gradient(145deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 25px rgba(59, 130, 246, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .fastwork-profile-card:hover {
+      border-color: #38bdf8;
+      box-shadow: 0 25px 50px -12px rgba(56, 189, 248, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .fastwork-card-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .fastwork-avatar-wrap {
+      position: relative;
+      width: 78px;
+      height: 78px;
+      flex-shrink: 0;
+    }
+
+    .fastwork-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid #38bdf8;
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+    }
+
+    .fastwork-online-indicator {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 14px;
+      height: 14px;
+      background: #10b981;
+      border: 2px solid #0f172a;
+      border-radius: 50%;
+    }
+
+    .fastwork-title-group h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #f8fafc;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .fastwork-verified-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #38bdf8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+
+    .fastwork-stars-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #fbbf24;
+      font-size: 0.88rem;
+      margin-top: 5px;
+    }
+
+    .fastwork-stars-row span {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .fastwork-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      background: rgba(11, 15, 25, 0.6);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .fastwork-stat-val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #34d399;
+      font-family: var(--font-mono);
+    }
+
+    .fastwork-stat-lbl {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .fastwork-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .fastwork-tag-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .fastwork-card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .fastwork-card-actions .btn-hire {
+      flex: 1;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    }
+
+    .fastwork-card-actions .btn-hire:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .fastwork-card-actions .btn-copy {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f8fafc;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .fastwork-card-actions .btn-copy:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #38bdf8;
+    }
+
+    /* Fastwork Services Section */
+    .fastwork-services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .fastwork-service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .fastwork-service-card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    .service-badge-pill {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      align-self: flex-start;
+    }
+
+    .service-badge-pill.hot {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .service-badge-pill.recommended {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .service-badge-pill.new {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .service-badge-pill.scholar {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .service-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .service-checklist {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .service-checklist li {
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .service-checklist li span {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .service-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .service-rate-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .service-rate-val {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    /* Floating Hire Dock */
+    .floating-hire-dock {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 999px;
+      padding: 8px 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 999;
+      max-width: 90vw;
+    }
+
+    .dock-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      white-space: nowrap;
+    }
+
+    .dock-dot {
+      width: 9px;
+      height: 9px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    .dock-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dock-btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .dock-btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .dock-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .dock-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .fastwork-hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .dock-status-text {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -928,6 +1388,7 @@
       <nav>
         <ul>
           <li><a href="#about">Story</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#demos">Diagnostics</a></li>
           <li><a href="#projects">Case Studies</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -941,47 +1402,219 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section -->
+    <!-- Hero Section with Fastwork Pro Bento Layout -->
     <section class="hero">
-      <div class="status-badge">
-        <span class="status-dot"></span>
-        <span>Ready for 100% Remote Work | APAC / Thailand Timezone</span>
-      </div>
-      <h1 class="hero-title">
-        Bilingual <span>Technical Support (L1)</span> & Data Operations
-      </h1>
-      <p class="hero-subtitle">
-        Graduated in English Education with hands-on technical training from <strong>DataRockie Bootcamp (Scholarship Awardee)</strong>. Strong verbal and written English communication combined with solid <strong>SQL querying</strong>, terminal navigation, and an unwavering commitment to high-ticket queue resolution.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#demos" class="btn-primary">
-          <span>⚡ Try Live Diagnostics Demo</span>
-        </a>
-        <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" class="btn-secondary" target="_blank">
-          <span>📥 Download CV (PDF)</span>
-        </a>
-        <a href="#contact" class="btn-secondary">
-          <span>📬 Contact Nurlaila</span>
-        </a>
+      <!-- Fastwork Pro Trust Ribbon -->
+      <div class="fastwork-badge-strip">
+        <span class="fastwork-pill verified">✅ ยืนยันตัวตนแล้ว (Verified Identity)</span>
+        <span class="fastwork-pill online"><span class="pulse-dot"></span> พร้อมเริ่มงานทันที (Available Now)</span>
+        <span class="fastwork-pill rating">⭐ 5.0 (รีวิวระดับดีเยี่ยม / 100% Reliability)</span>
+        <span class="fastwork-pill pro">🔥 Fastwork Pro Model • APAC Remote</span>
       </div>
 
-      <div class="hero-metrics">
-        <div class="metric-card">
-          <div class="metric-val">Fluent EN / TH</div>
-          <div class="metric-label">Bilingual Communication & Presentation</div>
+      <div class="fastwork-hero-grid">
+        <!-- Left Column: Title & Proposition -->
+        <div>
+          <h1 class="hero-title">
+            Bilingual <span>Technical Support (L1)</span> & Data Analyst
+          </h1>
+          <p class="hero-subtitle">
+            บัณฑิตศึกษาศาสตร์ภาษาอังกฤษ มหาวิทยาลัยราชภัฏยะลา + นักเรียนทุน <strong>DataRockie Bootcamp รุ่น 12 (Top 20% Mastered)</strong> สื่อสารภาษาอังกฤษระดับ <strong>EF SET CEFR B2 (Speaking C2 Proficient)</strong> เชี่ยวชาญการสืบค้นข้อมูล <strong>SQL</strong> และการจัดทำรายงานอัตโนมัติด้วย <strong>R Markdown</strong> พร้อมทุ่มเทดูแลลูกค้าและระบบ SaaS แบบ 100% Remote เต็มเวลา
+          </p>
+
+          <div class="hero-cta">
+            <a href="#demos" class="btn-primary">
+              <span>⚡ Try Live Diagnostics Demo</span>
+            </a>
+            <a href="#services" class="btn-secondary">
+              <span>📦 ดูแพ็กเกจงาน / บริการ</span>
+            </a>
+            <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" class="btn-secondary" target="_blank">
+              <span>📥 Download CV (PDF)</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <div class="metric-val">CEFR B2 / C2</div>
+              <div class="metric-label">Speaking C2 (73/100) • Bilingual Support</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">SQL & R Data</div>
+              <div class="metric-label">5-Table Joins & Automated Reports</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">Top 20% Scholar</div>
+              <div class="metric-label">DataRockie School Batch 12 Graduate</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-val">100% Remote</div>
+              <div class="metric-label">Satun, Thailand (UTC+7) • Fiber Optic Ready</div>
+            </div>
+          </div>
         </div>
-        <div class="metric-card">
-          <div class="metric-val">SQL Queries</div>
-          <div class="metric-label">Relational Data Checks & Multi-table Joins</div>
+
+        <!-- Right Column: Fastwork Pro Freelancer Bento Profile Card -->
+        <div class="fastwork-profile-card">
+          <div class="fastwork-card-header">
+            <div class="fastwork-avatar-wrap">
+              <img src="images/profile_photo.png" alt="Nurlaila Tahawan" class="fastwork-avatar-img">
+              <div class="fastwork-online-indicator" title="พร้อมเริ่มงานทันที"></div>
+            </div>
+            <div class="fastwork-title-group">
+              <h2>นูรไลลา ตะฮาวัน</h2>
+              <div style="color: #94a3b8; font-size: 0.88rem; font-weight: 500;">Nurlaila Tahawan</div>
+              <div class="fastwork-verified-tag">
+                <span>✓</span> ยืนยันตัวตนแล้ว (Verified Talent)
+              </div>
+              <div class="fastwork-stars-row">
+                ★★★★★ <span>5.0 (วินัย 100% Remote)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Performance Stats -->
+          <div class="fastwork-stats-grid">
+            <div>
+              <div class="fastwork-stat-val">&lt; 15 นาที</div>
+              <div class="fastwork-stat-lbl">ตอบกลับไวมาก</div>
+            </div>
+            <div>
+              <div class="fastwork-stat-val">100%</div>
+              <div class="fastwork-stat-lbl">ความสำเร็จงาน</div>
+            </div>
+            <div>
+              <div class="fastwork-stat-val">Top 20%</div>
+              <div class="fastwork-stat-lbl">DataRockie Scholar</div>
+            </div>
+          </div>
+
+          <!-- Skill Badges -->
+          <div class="fastwork-tags">
+            <span class="fastwork-tag-item">🎧 SaaS L1 Support</span>
+            <span class="fastwork-tag-item">🗄️ SQL Multi-table Joins</span>
+            <span class="fastwork-tag-item">📊 R Markdown Reporting</span>
+            <span class="fastwork-tag-item">🌐 CEFR B2 (Speaking C2)</span>
+            <span class="fastwork-tag-item">🔍 Regex Date Normalizer</span>
+            <span class="fastwork-tag-item">💻 Python & Bash Triage</span>
+          </div>
+
+          <!-- Quick Hire Actions -->
+          <div class="fastwork-card-actions">
+            <a href="#contact" class="btn-hire">
+              <span>💬 จ้างงาน / ส่งข้อความ</span>
+            </a>
+            <button onclick="copyEmail()" class="btn-copy">
+              <span>📋 คัดลอกเมล</span>
+            </button>
+          </div>
         </div>
-        <div class="metric-card">
-          <div class="metric-val">Python & Bash</div>
-          <div class="metric-label">Actively Learning Scripting & Terminal Triage</div>
+      </div>
+    </section>
+
+    <!-- Fastwork Services & Work Scope Section -->
+    <section id="services" style="padding-top: 10px;">
+      <div class="section-header">
+        <span class="section-tag">Fastwork Pro Services</span>
+        <h2 class="section-title">บริการและแพ็กเกจงานที่พร้อมรับผิดชอบ</h2>
+        <p class="section-desc">ออกแบบตามมาตรฐาน Fastwork Pro — พร้อมเริ่มงานแบบ Full-time Remote หรือสัญญาจ้างงาน สนับสนุนลูกค้า SaaS ระดับสากล</p>
+      </div>
+
+      <div class="fastwork-services-grid">
+        <!-- Service 1: SaaS L1 Support -->
+        <div class="fastwork-service-card">
+          <div>
+            <span class="service-badge-pill hot">🔥 ยอดนิยม (Most Popular)</span>
+            <h3 class="service-title">Bilingual L1 SaaS Support & Customer Care</h3>
+            <p class="service-desc">
+              บริการดูแลและตอบคำถามผู้ใช้งานระบบ SaaS ทั่วโลก สื่อสารภาษาอังกฤษและไทยอย่างสุภาพ นุ่มนวล รับมือคิวงานปริมาณสูงด้วยความอดทน
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> <strong>SLA Response:</strong> ตอบกลับรวดเร็วภายใน 15 นาที พร้อมแก้ไขปัญหาเบื้องต้นทันที</li>
+              <li><span>✓</span> <strong>Queue Stamina:</strong> รองรับปริมาณงาน 50+ tickets/วัน ผ่าน Zendesk, Intercom, Email, Discord</li>
+              <li><span>✓</span> <strong>L2 Escalation:</strong> บันทึกขั้นตอน Reproduction, Log, และ Account ID ครบถ้วน เพื่อให้ทีมวิศวกรแก้ไขต่อได้ทันที</li>
+              <li><span>✓</span> <strong>Bilingual Empathy:</strong> ลดความตึงเครียดของลูกค้าด้วยทักษะการฟังและการชี้แจงที่เข้าใจง่าย</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <div>
+              <div class="service-rate-label">รูปแบบการจ้างงาน</div>
+              <div class="service-rate-val">Full-time Remote / Shift</div>
+            </div>
+            <a href="#contact" class="btn-notion" style="font-size: 0.8rem; padding: 7px 14px;">💬 จ้างงาน / ทักแชต</a>
+          </div>
         </div>
-        <div class="metric-card">
-          <div class="metric-val">100% Remote</div>
-          <div class="metric-label">Dedicated Workstation & Fiber Internet Ready</div>
+
+        <!-- Service 2: Database Triage & SQL Query Validation -->
+        <div class="fastwork-service-card">
+          <div>
+            <span class="service-badge-pill recommended">⭐ แนะนำ (Recommended)</span>
+            <h3 class="service-title">Database Triage & SQL Query Validation</h3>
+            <p class="service-desc">
+              ตรวจสอบสถานะบัญชี คำสั่งซื้อล้มเหลว และข้อผิดพลาดในระบบฐานข้อมูลเชิงสัมพันธ์ ช่วยแยกแยะตัวแปรก่อนส่งต่อนักพัฒนา
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> <strong>Multi-table JOINs:</strong> เชื่อมโยงตารางข้อมูล 5+ ตารางเพื่อตรวจสอบยอดเงินและสถานะสมาชิก</li>
+              <li><span>✓</span> <strong>Record Discrepancy:</strong> ค้นหาข้อมูลสูญหาย ข้อมูลไม่ตรงกัน และแจ้งเตือนข้อผิดพลาดเชิงลอจิก</li>
+              <li><span>✓</span> <strong>SQL Sandbox:</strong> เขียนคำสั่ง SELECT, WHERE, GROUP BY, HAVING บน SQLite และ PostgreSQL</li>
+              <li><span>✓</span> <strong>Root Cause Isolation:</strong> ช่วยลดภาระทีม Engineering โดยระบุสาเหตุข้อผิดพลาดได้อย่างแม่นยำ</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <div>
+              <div class="service-rate-label">ความเชี่ยวชาญ</div>
+              <div class="service-rate-val">SQL Crash Course Cert</div>
+            </div>
+            <a href="#demos" class="btn-notion" style="font-size: 0.8rem; padding: 7px 14px;">⚡ ลอง Sandbox</a>
+          </div>
+        </div>
+
+        <!-- Service 3: Automated Technical Reporting with R -->
+        <div class="fastwork-service-card">
+          <div>
+            <span class="service-badge-pill new">✨ New Service</span>
+            <h3 class="service-title">Automated Technical Reporting with R</h3>
+            <p class="service-desc">
+              จัดทำระบบรายงานผลและสรุปข้อมูลทางเทคนิคอัตโนมัติแบบ Reproducible Reports ด้วย R Markdown, knitr และ ggplot2
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> <strong>Automated Reports:</strong> ประมวลผลและแปลงข้อมูลซัพพอร์ตออกมาเป็นรายงาน HTML และ PDF สวยงาม</li>
+              <li><span>✓</span> <strong>Visual Analytics:</strong> สร้างกราฟวิเคราะห์แนวโน้มปัญหา (Incident Trends) และประสิทธิภาพ SLA</li>
+              <li><span>✓</span> <strong>Documentation:</strong> จัดทำคู่มือและรายงานสรุปสำหรับฝ่ายบริหารและทีมงานอย่างเป็นระบบ</li>
+              <li><span>✓</span> <strong>Case Study:</strong> มีบทความวิเคราะห์และตัวอย่างโค้ดพร้อมแสดงบน Notion</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <div>
+              <div class="service-rate-label">กรณีศึกษาบน Notion</div>
+              <div class="service-rate-val">Built a report with R</div>
+            </div>
+            <a href="https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7" target="_blank" class="btn-notion" style="font-size: 0.8rem; padding: 7px 14px;">📖 อ่านรายงาน ↗</a>
+          </div>
+        </div>
+
+        <!-- Service 4: Data Analyst & Workflow Automation -->
+        <div class="fastwork-service-card">
+          <div>
+            <span class="service-badge-pill scholar">🎓 Top 20% Scholar</span>
+            <h3 class="service-title">Data Analyst & Workflow Automation</h3>
+            <p class="service-desc">
+              ทำความสะอาดข้อมูลที่ยุ่งเหยิง สกัดรหัสด้วย Regex และสร้างสูตรสเปรดชีตขั้นสูงสำหรับระบบติดตามงาน
+            </p>
+            <ul class="service-checklist">
+              <li><span>✓</span> <strong>Regex Text Parsing:</strong> ดึงรหัสประจำตัว รหัสบัตร และที่อยู่จากก้อนข้อความยาวอย่างแม่นยำ</li>
+              <li><span>✓</span> <strong>Date Normalization:</strong> แปลงวันที่ พ.ศ. เป็นมาตรฐานสากล ISO YYYY-MM-DD เพื่อบันทึกลงฐานข้อมูล</li>
+              <li><span>✓</span> <strong>Dynamic Queries:</strong> ออกแบบโมเดลตัวกรองด้วย QUERY function และลำดับความสำคัญตรรกะ boolean</li>
+              <li><span>✓</span> <strong>Bootcamp Capstone:</strong> ผ่านการอบรมเข้มข้น 100+ ชม. จาก DataRockie School (อันดับ Top 20%)</li>
+            </ul>
+          </div>
+          <div class="service-footer">
+            <div>
+              <div class="service-rate-label">กรณีศึกษาบน Notion</div>
+              <div class="service-rate-val">Data Analyst Portfolio</div>
+            </div>
+            <a href="https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64" target="_blank" class="btn-notion" style="font-size: 0.8rem; padding: 7px 14px;">📖 ดูพอร์ต ↗</a>
+          </div>
         </div>
       </div>
     </section>
@@ -1114,7 +1747,52 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Chinook Database -->
+        <!-- Project 1: Built a report with R (New!) -->
+        <div class="project-box">
+          <div>
+            <span class="project-tag" style="color: #c084fc; background: rgba(168, 85, 247, 0.12);">R Markdown • knitr • Automated Reports</span>
+            <h3 class="project-title">Built a Report with R</h3>
+            <p class="project-desc">
+              การสร้างระบบรายงานทางเทคนิคและสถิติข้อมูลอัตโนมัติแบบ Reproducible Reports ด้วย R Markdown และ ggplot2 สามารถแปลงชุดข้อมูลดิบเป็นเอกสารรายงานสรุปผล HTML/PDF ที่สวยงาม พร้อมวิเคราะห์แนวโน้มปัญหาได้อย่างเป็นระบบ
+            </p>
+            <div class="project-code-box">
+---<br>
+title: "Technical Incident & SLA Report"<br>
+output: html_document<br>
+---<br>
+library(dplyr); library(ggplot2)<br>
+sla_summary &lt;- support_logs %&gt;%<br>
+&nbsp;&nbsp;filter(status == "RESOLVED") %&gt;%<br>
+&nbsp;&nbsp;group_by(tier) %&gt;% summarise(avg_mins = mean(duration))
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7" target="_blank" class="btn-notion">
+            <span>📖 Read "Built a report with R" on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 2: Data Analyst Portfolio - DataRockie School (New!) -->
+        <div class="project-box">
+          <div>
+            <span class="project-tag" style="color: #34d399; background: rgba(16, 185, 129, 0.12);">Data Analyst • DataRockie • Top 20% Rank</span>
+            <h3 class="project-title">Data Analyst Portfolio (DataRockie)</h3>
+            <p class="project-desc">
+              แฟ้มผลงานนักวิเคราะห์ข้อมูลและนักเรียนทุน Data Science Bootcamp รุ่น 12 ครอบคลุมการเขียนโค้ดวิเคราะห์ข้อมูล 100+ ชั่วโมง สอบผ่านข้อสอบวัดผล 240 ข้อ ติดอันดับ Top 20% ผสานการใช้ SQL, Spreadsheets, R และพื้นฐาน Python
+            </p>
+            <div class="project-code-box">
+-- DataRockie Comprehensive Analytics Pipeline<br>
+SELECT cohort, COUNT(student_id) AS total_students,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVG(evaluation_score) AS avg_score,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERCENTILE_CONT(0.80) WITHIN GROUP (ORDER BY score) AS top_tier<br>
+FROM datarockie_bootcamp_batch12 GROUP BY cohort;
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64" target="_blank" class="btn-notion">
+            <span>📖 Read Data Analyst Portfolio on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 3: Chinook Database -->
         <div class="project-box">
           <div>
             <span class="project-tag">SQL Database • 5-Table Joins</span>
@@ -1133,11 +1811,11 @@ ORDER BY Total_Spent DESC LIMIT 5;
             </div>
           </div>
           <a href="https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55" target="_blank" class="btn-notion">
-            <span>📖 Read Full Notion Case Study ↗</span>
+            <span>📖 Read Chinook SQL Case Study ↗</span>
           </a>
         </div>
 
-        <!-- Project 2: ID Card Parser & Regex -->
+        <!-- Project 4: ID Card Parser & Regex -->
         <div class="project-box">
           <div>
             <span class="project-tag">Regex • Data Cleaning • Normalization</span>
@@ -1157,7 +1835,7 @@ ORDER BY Total_Spent DESC LIMIT 5;
           </a>
         </div>
 
-        <!-- Project 3: Dynamic Query & Boolean Logic -->
+        <!-- Project 5: Dynamic Query & Boolean Logic -->
         <div class="project-box">
           <div>
             <span class="project-tag">Dynamic Query • Boolean Precedence</span>
@@ -1701,5 +2379,18 @@ ORDER BY Total_Spent DESC LIMIT 5;
       });
     }
   </script>
+
+  <!-- Floating Fastwork Hire Dock (Modern Pro & Teenager Tech) -->
+  <div class="floating-hire-dock">
+    <div class="dock-status">
+      <span class="dock-dot"></span>
+      <span class="dock-status-text"><strong>พร้อมเริ่มงานทันที:</strong> 100% Remote (UTC+7 Thailand)</span>
+    </div>
+    <div class="dock-actions">
+      <a href="#contact" class="dock-btn-primary"><span>💬 จ้างงาน / ทักแชต</span></a>
+      <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" target="_blank" class="dock-btn-secondary"><span>📄 ดาวน์โหลด CV</span></a>
+      <button onclick="copyEmail()" class="dock-btn-secondary"><span>📋 คัดลอกเมล</span></button>
+    </div>
+  </div>
 </body>
 </html>
