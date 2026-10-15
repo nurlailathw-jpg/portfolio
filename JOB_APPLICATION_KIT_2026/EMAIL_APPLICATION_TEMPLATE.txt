@@ -1,0 +1,72 @@
+================================================================================
+EMAIL APPLICATION TEMPLATE: L1 TECHNICAL SUPPORT (REMOTE 100%)
+Job Reference: "งานประจำ L1 Support remote 100% ต้องภาษาอังกฤษได้นะครับ"
+Post Link: https://www.facebook.com/groups/855894022519114/posts/1573115117463664/
+================================================================================
+
+--- [OPTION 1: PROFESSIONAL ENGLISH EMAIL (Recommended for SaaS Hiring Managers)] ---
+
+Subject: Application: L1 Technical Support Engineer (Remote - APAC Timezone) - Nurlaila Tahawan
+
+Dear Hiring Team,
+
+I am writing to enthusiastically apply for the 100% Remote L1 Technical Support position supporting your global SaaS platform in the APAC timezone.
+
+With an academic foundation in English Education (B.Ed., YRU) and intensive technical training through the DataRockie Data Science Bootcamp (Scholarship Graduate, Top 20% Rank), I offer a strong blend of pedagogical empathy, fluent English communication, and disciplined database troubleshooting.
+
+Key strengths I bring to your L1 Support team:
+1. Bilingual English Fluency: Certified EF SET CEFR B2 with C2 Proficient in Spoken English (73/100). Experienced in de-escalating customer frustration, active listening, and explaining technical workflows in clear, courteous English.
+2. Hands-on Database Triage (SQL): Practical experience formulating relational queries across 5-table joins (INNER/LEFT JOIN, GROUP BY, aggregations) to verify tenant account states, reconcile failed transactions, and isolate data issues before escalating to L2 Engineering.
+3. High Queue Stamina & Calm Discipline: Process-oriented approach to maintaining <15-min first response times, drafting clear Jira escalation tickets with timestamps/error logs, and managing high daily ticket volumes.
+4. Dedicated 100% Remote Infrastructure: Fully equipped home office in Satun, Thailand (UTC+7) with redundant high-speed fiber-optic internet, dedicated workspace, and immediate readiness to cover APAC shifts.
+
+Please find attached my CV in PDF format. You may also review my interactive diagnostics sandbox, verified certificates, and live Notion technical case studies via the links below:
+
+• Interactive Web Portfolio: file:///C:/Users/nurla/my_resume/index.html
+• Online Certificate Verification (DataRockie): https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9
+• EF SET English Certificate (C2/B2): https://cert.efset.org/th/P7dEUX
+• Notion Technical Projects:
+  - R Markdown Automated Reports: https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7
+  - Data Analyst Portfolio: https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64
+  - Chinook SQL Database Analysis: https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55
+
+Thank you for your time and consideration. I would welcome the opportunity to discuss how my customer empathy and technical grit can support your enterprise customers.
+
+Sincerely,
+
+Ms. Nurlaila Tahawan
+Bilingual L1 Technical Support & Data Operations
+Email: nurlaila.thw@gmail.com
+Phone / WhatsApp: +66 93 768 4930
+Location: Satun, Thailand (UTC+7)
+LinkedIn: https://www.linkedin.com/in/nurlaila-tahawan-271569305/
+GitHub: https://github.com/nurlailathw-jpg
+
+
+--------------------------------------------------------------------------------
+--- [OPTION 2: THAI MESSAGE FOR FACEBOOK / MESSENGER / INBOX RECRUITER] ---
+--------------------------------------------------------------------------------
+
+สวัสดีค่ะ,
+
+ขออนุญาตติดต่อสมัครงานตำแหน่ง "L1 Support (Remote 100%)" สำหรับบริษัท SaaS ตามที่โพสต์ในกลุ่ม "หางาน IT, Dev, Data Analyst, Data Engineer, SA, BA" ค่ะ
+
+หนูชื่อ นูรไลลา ทาฮาวัน (Nurlaila Tahawan) สนใจร่วมงานทีม Support ใน timezone ประเทศไทย/APAC มากค่ะ
+
+จุดเด่นและคุณสมบัติตรงตามที่ระบุในประกาศ:
+1. ภาษาอังกฤษคล่องแคล่ว: จบปริญญาตรี ครุศาสตร์บัณฑิต สาขาภาษาอังกฤษ (มรภ.ยะลา) และสอบได้ผลคะแนน EF SET ระดับ CEFR B2 (พาร์ท Speaking ระดับ C2 Proficient 73/100) สื่อสารภาษาอังกฤษกับลูกค้าองค์กรต่างชาติได้อย่างสุภาพ มั่นใจ และมี Empathy สูงค่ะ
+2. ทักษะทางเทคนิค (SQL & Data Triage): ได้รับทุนการศึกษา Data Science Bootcamp รุ่น 12 จากสถาบัน DataRockie สอบผ่านข้อสอบ 240 ข้อ ติดอันดับ Top 20% สามารถเขียน SQL Join 5 ตาราง เพื่อตรวจสอบสถานะ User/Transaction ในฐานข้อมูล และอ่าน Error Code ในเซิร์ฟเวอร์เพื่อแพ็กเกจส่งต่อให้ทีม L2 ได้อย่างถูกต้อง
+3. ความพร้อม Remote 100%: ประจำการอยู่ที่จังหวัดสตูล มีห้องทำงานส่วนตัวพร้อมอินเทอร์เน็ต Fiber Optic ความเร็วสูง พร้อมเริ่มงานทันทีค่ะ
+
+เอกสารแนบและลิงก์ผลงาน:
+• ลิงก์ตรวจเช็กใบรับรอง DataRockie: https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9
+• ใบรับรอง EF SET (English C2/B2): https://cert.efset.org/th/P7dEUX
+• โปรเจกต์ SQL & R บน Notion: https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55
+
+หนูได้แนบไฟล์ Resume (PDF) มาพร้อมกันนี้แล้ว หากต้องการข้อมูลเพิ่มเติมหรือสัมภาษณ์ หนูพร้อมคุยได้ตลอดเวลาค่ะ
+
+ขอบพระคุณมากค่ะ
+นูรไลลา ทาฮาวัน (Nurlaila Tahawan)
+Email: nurlaila.thw@gmail.com
+โทร: 093-768-4930
+LinkedIn: https://www.linkedin.com/in/nurlaila-tahawan-271569305/
