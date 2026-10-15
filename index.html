@@ -776,7 +776,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 14px;
-      overflow: hidden;
+      overflow-y: auto;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -931,6 +931,7 @@
           <li><a href="#demos">Diagnostics</a></li>
           <li><a href="#projects">Case Studies</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio-spotlight">Portfolio</a></li>
           <li><a href="#certs">Certificates</a></li>
           <li><a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" target="_blank" style="color: #38bdf8; font-weight: 700;">CV (PDF) ↗</a></li>
           <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
@@ -1236,6 +1237,45 @@ ORDER BY Total_Spent DESC LIMIT 5;
       </div>
     </section>
 
+    <!-- Featured Bilingual Portfolio Spotlight -->
+    <section id="portfolio-spotlight" style="margin-bottom: 70px;">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Featured Showcase</span>
+        <h2 class="section-title">Portfolio — Ms. Nurlaila Tahawan</h2>
+        <p class="section-desc">Bilingual English Teaching, Classroom Action Research, Pronunciation Coaching & International Coordination.</p>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.85) 100%); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 18px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; align-items: center;">
+        <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.12); cursor: pointer; max-height: 480px; background: #000;" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')">
+          <img src="images/portfolio_ms_nurlaila_tahawan_preview.jpg" alt="Portfolio - Ms. Nurlaila Tahawan" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.85)); padding: 14px; text-align: center; color: #38bdf8; font-weight: 600; font-size: 0.88rem;">
+            🔍 Click to Expand Full Infographic (6,198 × 15,949 px)
+          </div>
+        </div>
+        <div>
+          <span style="display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px;">English Teaching & Community Leadership</span>
+          <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 12px; color: #f8fafc;">"Don't fear using English — Let's make it fun!"</h3>
+          <p style="color: #94a3b8; font-size: 0.94rem; line-height: 1.7; margin-bottom: 16px;">
+            Official visual portfolio demonstrating cross-cultural communication, empathetic coaching, and leadership:
+          </p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 22px; color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>📖</span> <div><strong>Classroom Action Research:</strong> English Phonics spelling and reading development using targeted Flashcard techniques at Ban Yantakuan School.</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🗣️</span> <div><strong>Practical Pedagogy:</strong> Pronunciation drills, interactive letter games, listening comprehension, and active English conversation workshops.</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🌏</span> <div><strong>Cross-Cultural Coordination:</strong> Welcoming Indonesian exchange students & teachers; conversation tutoring at Center of Languages and ASEAN Studies (CLI).</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🎯</span> <div><strong>Tournament Operations:</strong> Scorer & sports event coordinator for Betong Festival & YRU Archery Club.</div></li>
+          </ul>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn-primary" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')" style="padding: 10px 18px; font-size: 0.88rem; cursor: pointer;">
+              <span>🔍 View Full Portfolio Modal</span>
+            </button>
+            <a href="images/portfolio_ms_nurlaila_tahawan.jpg" target="_blank" class="btn-secondary" style="padding: 10px 18px; font-size: 0.88rem;">
+              <span>↗ Open Hi-Res (New Tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Credentials & Certifications Gallery -->
     <section id="certs">
       <div class="section-header">
@@ -1246,8 +1286,9 @@ ORDER BY Total_Spent DESC LIMIT 5;
 
       <!-- Filter Controls -->
       <div class="cert-filters">
-        <button class="cert-filter-btn active" onclick="filterCerts('all', this)">All Credentials (11)</button>
+        <button class="cert-filter-btn active" onclick="filterCerts('all', this)">All Credentials (14)</button>
         <button class="cert-filter-btn" onclick="filterCerts('tech', this)">💻 Computer & Technical (8)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('english', this)">🌐 English & CEFR (3)</button>
         <button class="cert-filter-btn" onclick="filterCerts('leadership', this)">🤝 Leadership & Volunteer (3)</button>
       </div>
 
@@ -1416,6 +1457,51 @@ ORDER BY Total_Spent DESC LIMIT 5;
             </div>
           </div>
         </div>
+
+        <!-- 12. EF SET English Certificate (CEFR B2 / C2 Speaking) -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/cert_cefr_efset_b2.jpg', 'Official EF SET English Certificate - นูรไลลา ตะฮาวัน (Score: 57/100, CEFR B2 Upper Intermediate, Speaking: 73/100 C2 Proficient - cert.efset.org/th/P7dEUX)')">
+          <div class="cert-thumb">
+            <img src="images/cert_cefr_efset_b2.jpg" alt="EF SET English Certificate">
+            <span class="cert-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">CEFR B2 • C2 Speaking</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">EF SET English Certificate (CEFR B2)</h3>
+              <p class="cert-issuer">EF Standard English Test (cert.efset.org)</p>
+              <p class="cert-desc">Score: 57/100 (B2 Upper Intermediate). Achieved <strong>C2 Proficient</strong> level in Speaking (73/100), Reading 55 (B2), Listening 52 (B2). <a href="https://cert.efset.org/th/P7dEUX" target="_blank" style="color: #38bdf8; text-decoration: underline;">Verify Credential ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. YRU-TEP English Certificate (CEFR B1) -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/cert_cefr_yrutep_b1.jpg', 'YRU-TEP Certificate of Proficiency (CEFR B1) - Center of Languages and ASEAN Studies, Yala Rajabhat University (Score: 63, Student ID: 406302033)')">
+          <div class="cert-thumb">
+            <img src="images/cert_cefr_yrutep_b1.jpg" alt="YRU-TEP Certificate">
+            <span class="cert-badge" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">YRU-TEP • CEFR B1</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">YRU-TEP English Proficiency (CEFR B1)</h3>
+              <p class="cert-issuer">Center of Languages & ASEAN Studies (YRU)</p>
+              <p class="cert-desc">Standardized university English proficiency assessment (Score: 63, CEFR B1 level). Certified by Asst. Prof. Dr. Sirichai Namburi, Acting President of YRU.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Portfolio - Ms. Nurlaila Tahawan -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')">
+          <div class="cert-thumb">
+            <img src="images/portfolio_ms_nurlaila_tahawan_preview.jpg" alt="Portfolio Ms. Nurlaila Tahawan">
+            <span class="cert-badge" style="color: #ec4899; border-color: rgba(236, 72, 153, 0.4);">Bilingual Showcase</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Portfolio — Ms. Nurlaila Tahawan</h3>
+              <p class="cert-issuer">Bilingual Education, YRU & Practicum Schools</p>
+              <p class="cert-desc">Comprehensive visual portfolio detailing English Phonics action research, cross-cultural coordination for Indonesian students, and archery tournament administration. <a href="images/portfolio_ms_nurlaila_tahawan.jpg" target="_blank" style="color: #38bdf8; text-decoration: underline;">View Full Hi-Res ↗</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1451,7 +1537,6 @@ ORDER BY Total_Spent DESC LIMIT 5;
         </div>
 
         <div class="signature-area">
-          <img src="images/signature.png" alt="Nurlaila Tahawan Signature">
           <span class="signature-label">Nurlaila Tahawan — Satun, Thailand (UTC+7)</span>
         </div>
       </div>
@@ -1583,7 +1668,7 @@ ORDER BY Total_Spent DESC LIMIT 5;
     // Modal Lightbox
     function openModal(imgSrc, captionText) {
       document.getElementById('modal-img-tag').src = imgSrc;
-      document.getElementById('modal-caption-tag').innerText = captionText;
+      document.getElementById('modal-caption-tag').innerHTML = captionText + ` <a href="${imgSrc}" target="_blank" style="margin-left: 12px; color: #38bdf8; text-decoration: underline; font-weight: normal; font-size: 0.85rem;">[Open Full High-Res ↗]</a>`;
       document.getElementById('image-modal').classList.add('active');
     }
 

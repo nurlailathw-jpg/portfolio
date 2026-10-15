@@ -9,7 +9,7 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 ---
 
 ## SKILLS & COMPETENCIES
-* **Languages:** Thai (Native), English (Fluent – verbal communication, technical reading, and professional writing).
+* **Languages:** Thai (Native), English (Fluent – EF SET CEFR B2 Certified with C2 Proficient in Speaking; YRU-TEP B1; confident in technical reading, customer triage, and verbal guidance).
 * **Databases & Querying:** SQL (Foundational & Intermediate: `SELECT`, `WHERE`, `JOIN`, `GROUP BY`, data filtering, sorting, diagnosing database record discrepancies).
 * **Scripting & Command Line:** Python & Bash (Actively Learning / Foundational: script syntax, basic terminal navigation, file inspection, running automation commands).
 * **Tools & Software:** Spreadsheets (Google Sheets / Excel), Microsoft Office (Word, PowerPoint), Git (basic version control), Canva.
@@ -25,7 +25,9 @@ Recent graduate with a Bachelor's in English Education and practical technical t
 * Wrote SQL queries on relational databases to extract, filter, and inspect data records.
 * Actively continuing self-study in Python and Bash scripting to automate repetitive tasks and navigate Unix command-line environments.
 
-**Official Technical Certifications:**
+**Official Credentials & Certifications:**
+* **EF SET English Certificate (CEFR B2 / C2 Speaking)** – Score: 57/100, Speaking: 73/100 C2 Proficient ([cert.efset.org/th/P7dEUX](https://cert.efset.org/th/P7dEUX))
+* **English Proficiency Certificate (CEFR B1)** – Yala Rajabhat University YRU-TEP (Score: 63)
 * **Certificate of Completion: SQL Crash Course** – DataRockie School (Cert No: `cert_650yhcyI`)
 * **Certificate of Completion: Google Sheets Crash Course** – DataRockie School (Cert No: `cert_0z932crs`)
 * **Certificate of Completion: R Crash Course** – DataRockie School (Cert No: `cert_z8cpdfsm`)
