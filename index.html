@@ -73,12 +73,13 @@
       z-index: 1;
     }
 
-    /* Navigation */
+    /* Navigation - Slim, Non-Intrusive Webflow/Stripe Style (56px) */
     header {
       position: sticky;
       top: 0;
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 25, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-color);
       z-index: 100;
     }
@@ -87,66 +88,118 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      height: 56px;
+      gap: 16px;
     }
 
     .logo {
       font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.5px;
+      font-size: 1.1rem;
+      letter-spacing: -0.4px;
       color: var(--text-main);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .logo-badge {
       background: linear-gradient(135deg, #3b82f6, #10b981);
       color: white;
-      padding: 4px 10px;
-      border-radius: 8px;
-      font-size: 0.85rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.78rem;
       font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-tag {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-weight: 500;
+      padding-left: 8px;
+      border-left: 1px solid var(--border-color);
+      font-family: var(--font-mono);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
     }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 28px;
+      gap: 20px;
       align-items: center;
+      white-space: nowrap;
     }
 
     nav a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       font-weight: 500;
-      transition: color 0.2s ease;
+      transition: color 0.15s ease;
     }
 
     nav a:hover {
       color: var(--text-main);
     }
 
-    .btn-nav {
-      background: #1e293b;
-      color: #38bdf8 !important;
-      padding: 8px 18px;
-      border-radius: 9999px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      font-weight: 600 !important;
-      transition: all 0.2s ease;
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
     }
 
-    .btn-nav:hover {
+    .btn-nav-cv {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8 !important;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 0.82rem;
+      font-weight: 700 !important;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-cv:hover {
       background: #38bdf8;
       color: #0b0f19 !important;
+      box-shadow: 0 2px 12px rgba(56, 189, 248, 0.3);
     }
 
-    /* Hero Section */
+    .btn-nav-contact {
+      background: #1e293b;
+      color: #f8fafc !important;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 0.82rem;
+      font-weight: 600 !important;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-contact:hover {
+      background: #334155;
+      color: white !important;
+      border-color: #64748b;
+    }
+
+    /* Hero Section - Compact, Proportioned for Notebooks & Laptops */
     .hero {
-      padding: 90px 0 60px;
+      padding: 44px 0 32px;
     }
 
     .status-badge {
@@ -156,27 +209,27 @@
       background: rgba(16, 185, 129, 0.1);
       border: 1px solid rgba(16, 185, 129, 0.3);
       color: #34d399;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 9999px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .status-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       background: #10b981;
       border-radius: 50%;
-      box-shadow: 0 0 10px #10b981;
+      box-shadow: 0 0 8px #10b981;
     }
 
     .hero-title {
-      font-size: 3.2rem;
+      font-size: 2.75rem;
       font-weight: 800;
       line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
     }
 
     .hero-title span {
@@ -186,51 +239,54 @@
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.08rem;
       color: var(--text-muted);
-      max-width: 760px;
-      margin-bottom: 32px;
+      max-width: 780px;
+      margin-bottom: 24px;
       font-weight: 400;
+      line-height: 1.6;
     }
 
     .hero-cta {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
       align-items: center;
-      margin-bottom: 40px;
+      margin-bottom: 26px;
     }
 
     .btn-primary {
       background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: white;
-      padding: 13px 26px;
-      border-radius: 10px;
+      padding: 10px 22px;
+      border-radius: 9px;
+      font-size: 0.92rem;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       transition: all 0.2s ease;
-      box-shadow: 0 4px 18px var(--primary-glow);
+      box-shadow: 0 4px 14px var(--primary-glow);
     }
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
     }
 
     .btn-secondary {
       background: var(--bg-card);
       color: var(--text-main);
-      padding: 13px 24px;
-      border-radius: 10px;
+      padding: 10px 20px;
+      border-radius: 9px;
+      font-size: 0.92rem;
       font-weight: 600;
       text-decoration: none;
       border: 1px solid var(--border-color);
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       transition: all 0.2s ease;
     }
 
@@ -242,9 +298,9 @@
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-top: 30px;
-      padding-top: 30px;
+      gap: 14px;
+      margin-top: 20px;
+      padding-top: 20px;
       border-top: 1px solid var(--border-color);
     }
 
@@ -252,19 +308,19 @@
       background: rgba(17, 24, 39, 0.7);
       border: 1px solid var(--border-color);
       border-radius: 12px;
-      padding: 18px;
+      padding: 14px 18px;
     }
 
     .metric-val {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: #38bdf8;
       font-family: var(--font-mono);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .metric-label {
-      font-size: 0.88rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
 
@@ -898,19 +954,102 @@
       font-size: 0.88rem;
     }
 
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.3rem;
+    /* Laptop & Notebook Optimization (Viewports <= 1120px) */
+    @media (max-width: 1120px) {
+      .nav-wrapper {
+        height: 54px;
+        gap: 12px;
       }
-      .story-card {
-        grid-template-columns: 1fr;
+      .logo-tag {
+        display: none;
+      }
+      nav ul {
+        gap: 14px;
+      }
+      nav a {
+        font-size: 0.84rem;
+      }
+      .btn-nav-cv, .btn-nav-contact {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+      }
+      .hero {
+        padding: 36px 0 24px;
+      }
+      .hero-title {
+        font-size: 2.35rem;
+      }
+      .hero-subtitle {
+        font-size: 1.02rem;
+      }
+    }
+
+    /* Screen height optimizations for notebooks (typically 768px - 850px height) */
+    @media (max-height: 850px) and (min-width: 769px) {
+      .nav-wrapper {
+        height: 52px;
+      }
+      .hero {
+        padding: 28px 0 20px;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+      .hero-subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+        line-height: 1.5;
+      }
+      .hero-cta {
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+      .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 0.88rem;
+      }
+      .hero-metrics {
+        margin-top: 14px;
+        padding-top: 14px;
+        gap: 10px;
+      }
+      .metric-card {
+        padding: 10px 14px;
+      }
+      .metric-val {
+        font-size: 1.2rem;
+      }
+      .metric-label {
+        font-size: 0.78rem;
+      }
+    }
+
+    /* Mobile Devices (<= 768px) */
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        height: 52px;
+      }
+      .logo-tag {
+        display: none;
       }
       nav ul {
         display: none;
       }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+      .story-card {
+        grid-template-columns: 1fr;
+      }
       .contact-box {
         padding: 30px 20px;
       }
+    }
+
     /* Clean Notion Button & Webflow 2025 Aesthetics */
     .btn-notion {
       display: inline-flex;
@@ -948,25 +1087,30 @@
   <div class="bg-glow-1"></div>
   <div class="bg-glow-2"></div>
 
-  <!-- Header -->
+  <!-- Header (Slim, modern, non-intrusive on notebook & laptop) -->
   <header>
     <div class="container nav-wrapper">
       <a href="#" class="logo">
         <span class="logo-badge">NT</span>
         <span>Nurlaila Tahawan</span>
+        <span class="logo-tag">L1 Tech Support &amp; Data</span>
       </a>
       <nav>
         <ul>
-          <li><a href="#about">Story</a></li>
           <li><a href="#demos">Diagnostics</a></li>
           <li><a href="#projects">Case Studies</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio-spotlight">Portfolio</a></li>
           <li><a href="#certs">Certificates</a></li>
-          <li><a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" target="_blank" style="color: #38bdf8; font-weight: 700;">CV (PDF) ↗</a></li>
-          <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
+          <li><a href="#about">Story</a></li>
         </ul>
       </nav>
+      <div class="nav-actions">
+        <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" target="_blank" class="btn-nav-cv">
+          <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>CV (PDF) ↗</span>
+        </a>
+        <a href="#contact" class="btn-nav-contact">Contact</a>
+      </div>
     </div>
   </header>
 
@@ -975,42 +1119,47 @@
     <section class="hero">
       <div class="status-badge">
         <span class="status-dot"></span>
-        <span>Ready for 100% Remote Work | APAC / Thailand Timezone</span>
+        <span>Ready for 100% Remote Work | APAC / Thailand Timezone (UTC+7)</span>
       </div>
       <h1 class="hero-title">
         Bilingual <span>Technical Support (L1)</span> & Data Operations
       </h1>
       <p class="hero-subtitle">
-        Graduated in English Education (YRU) with hands-on technical training from <strong>DataRockie Data Science Bootcamp (Scholarship Awardee, Top 20% Rank)</strong>. Certified <strong>EF SET CEFR B2 (Speaking C2 Proficient - 73/100)</strong> combined with relational <strong>SQL database querying</strong> and reproducible reporting in <strong>R Markdown</strong>. Disciplined and ready to provide calm, high-queue remote coverage for global SaaS users.
+        B.Ed. English Education (YRU) with verified technical training from <strong>DataRockie Data Science Bootcamp (Scholarship Awardee, Top 20% Rank)</strong>. Certified <strong>EF SET CEFR B2 (Speaking C2 Proficient - 73/100)</strong> combined with relational <strong>SQL database querying</strong> (5-table joins) and reproducible reporting in <strong>R Markdown</strong>. Disciplined, calm, and ready for high-queue remote coverage for global SaaS users.
       </p>
 
       <div class="hero-cta">
-        <a href="#demos" class="btn-primary">
-          <span>⚡ Try Live Diagnostics Demo</span>
+        <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" class="btn-primary" target="_blank">
+          <svg style="width: 15px; height: 15px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>Download CV (PDF)</span>
         </a>
-        <a href="Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf" class="btn-secondary" target="_blank">
-          <span>📥 Download CV (PDF)</span>
+        <a href="#demos" class="btn-secondary">
+          <span>⚡ Live Diagnostics Sandbox</span>
         </a>
         <a href="#projects" class="btn-secondary">
-          <span>📂 Notion Case Studies</span>
+          <svg class="notion-icon-svg" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+          <span>Notion Projects (5)</span>
+        </a>
+        <a href="#certs" class="btn-secondary">
+          <span>🎓 Verified Certs</span>
         </a>
         <a href="#contact" class="btn-secondary">
-          <span>📬 Get in Touch</span>
+          <span>📬 Contact</span>
         </a>
       </div>
 
       <div class="hero-metrics">
         <div class="metric-card">
           <div class="metric-val">CEFR B2 / C2</div>
-          <div class="metric-label">Speaking C2 (73/100) • Bilingual Support</div>
+          <div class="metric-label">Speaking C2 (73/100) • Global Support</div>
         </div>
         <div class="metric-card">
           <div class="metric-val">SQL & R Data</div>
-          <div class="metric-label">5-Table Joins & Automated Reports</div>
+          <div class="metric-label">5-Table Joins & Reproducible Reports</div>
         </div>
         <div class="metric-card">
           <div class="metric-val">Top 20% Scholar</div>
-          <div class="metric-label">DataRockie School Batch 12 Graduate</div>
+          <div class="metric-label">DataRockie Bootcamp Batch 12</div>
         </div>
         <div class="metric-card">
           <div class="metric-val">100% Remote</div>
