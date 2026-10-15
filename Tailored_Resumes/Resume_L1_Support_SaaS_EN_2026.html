@@ -90,21 +90,49 @@
       margin-bottom: 16px;
     }
 
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .profile-photo {
+      width: 95px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .header-details {
+      flex-grow: 1;
+    }
+
     .name {
-      font-size: 24pt;
+      font-size: 23pt;
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -0.5px;
       line-height: 1.1;
     }
 
+    .role-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: var(--primary-accent);
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
     .contact-line {
-      margin-top: 8px;
+      margin-top: 6px;
       color: var(--text-muted);
-      font-size: 9pt;
+      font-size: 8.8pt;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px 14px;
     }
 
     .contact-line a {
@@ -214,12 +242,12 @@
     @media print {
       @page {
         size: A4;
-        margin: 12mm 15mm;
+        margin: 8mm 12mm;
       }
 
       body {
         background: white;
-        font-size: 9.3pt;
+        font-size: 9.1pt;
       }
 
       .action-bar {
@@ -236,12 +264,26 @@
 
       .header {
         border-bottom-width: 2px;
-        padding-bottom: 10px;
-        margin-bottom: 12px;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+      }
+
+      .header-content {
+        gap: 16px;
+      }
+
+      .profile-photo {
+        width: 76px;
+        height: 96px;
       }
 
       .name {
-        font-size: 22pt;
+        font-size: 20pt;
+      }
+
+      .role-title {
+        font-size: 9.6pt;
+        margin-bottom: 4px;
       }
 
       .section {
@@ -273,14 +315,20 @@
   <div class="page">
     <!-- Header -->
     <header class="header">
-      <h1 class="name">Nurlaila Tahawan</h1>
-      <div class="contact-line">
-        <span>📍 Satun 91140, Thailand</span>
-        <span>📞 +66 80 712 8297</span>
-        <span>✉️ <a href="mailto:nurlaila.thw@gmail.com">nurlaila.thw@gmail.com</a></span>
-        <span>🐙 <a href="https://github.com/nurlailathw-jpg" target="_blank">github.com/nurlailathw-jpg</a></span>
-        <span>🌐 <a href="https://nurlailatahawan.wordpress.com/" target="_blank">Personal Blog</a></span>
-        <span>🎓 <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank">Verified Credential</a></span>
+      <div class="header-content">
+        <img src="../images/profile_photo.png" alt="Nurlaila Tahawan" class="profile-photo">
+        <div class="header-details">
+          <h1 class="name">Nurlaila Tahawan</h1>
+          <div class="role-title">Bilingual L1 Technical Support Engineer | SaaS & Data Operations</div>
+          <div class="contact-line">
+            <span>📍 Satun 91140, Thailand</span>
+            <span>📞 +66 80 712 8297</span>
+            <span>✉️ <a href="mailto:nurlaila.thw@gmail.com">nurlaila.thw@gmail.com</a></span>
+            <span>🐙 <a href="https://github.com/nurlailathw-jpg" target="_blank">github.com/nurlailathw-jpg</a></span>
+            <span>🌐 <a href="https://nurlailatahawan.wordpress.com/" target="_blank">Personal Blog</a></span>
+            <span>🎓 <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank">Verified Credential</a></span>
+          </div>
+        </div>
       </div>
     </header>
 
