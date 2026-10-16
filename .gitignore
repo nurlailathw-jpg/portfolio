@@ -4,13 +4,19 @@ Thumbs.db
 desktop.ini
 *.tmp
 *.log
-
-# Large Downloads / Offline Saved Webpages / Accidental Nested Copy
-applications/Facebook_files/
-applications/Facebook.html
-Tailored_Resumes/my_resume/
 *.zip
 
-# Editor / IDE directories
+# Editor / IDE / AI Assistant Config
 .vscode/
 .idea/
+GEMINI.md
+
+# Private Candidate Prep Vault & Local-Only Drafts (Kept locally, hidden from public HR GitHub)
+CAREER_OPERATING_SYSTEM_2026/
+JOB_APPLICATION_KIT_2026/
+Cover_Letters/
+Assets_&_Photos/
+Certificates_&_Credentials/
+applications/
+Application_Tracker.md
+Tailored_Resumes/my_resume/
