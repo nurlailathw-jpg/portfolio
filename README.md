@@ -3,83 +3,89 @@
 
 > **Bilingual Technical Support (L1) & Data Operations Specialist**  
 > 📍 Satun, Thailand (100% Remote Ready - UTC+7)  
-> ✉️ [nurlaila.thw@gmail.com](mailto:nurlaila.thw@gmail.com) | 📞 +66 80 712 8297  
+> ✉️ [nurlaila.thw@gmail.com](mailto:nurlaila.thw@gmail.com) | 📞 +66 80 712 8297 / +66 93 768 4930  
 > 🐙 [GitHub Profile](https://github.com/nurlailathw-jpg) | 🌐 [Official Web Portfolio (Local)](index.html) | 📝 [Tech Blog](https://nurlailatahawan.wordpress.com/)  
-> 🏅 [Data Science Bootcamp Batch 12 Verified Credential](https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9)
+> 🏅 [Data Science Bootcamp Batch 12 Verified Credential](https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9) | 🗣️ [EF SET English Certificate (CEFR B2 / C2 Speaking)](https://cert.efset.org/th/P7dEUX)
 
 ---
 
-## 🌟 Interactive Web Portfolio
-The repository includes a production-grade, standalone web portfolio at **[`index.html`](index.html)**.
-* **Open locally:** Double-click [`index.html`](index.html) in any browser (Chrome, Edge, Safari).
-* **Deploy to GitHub Pages:** Push this repository to GitHub and enable GitHub Pages on `main` branch to host at `https://nurlailathw-jpg.github.io/`.
-* **Features:**
-  - Interactive SQL Query Diagnostic Console (Simulating L1 SaaS triage).
-  - Terminal & Bash Log Grep Sandbox (Inspecting 500/502 errors and healthchecks).
-  - High-resolution modal gallery with official certificates from Microsoft Thailand, DataRockie School, and U.S. Embassy Bangkok.
+## 🎯 1. Ready-to-Send Job Application Kit (Use These First!)
+
+Everything you need to apply right away is in two folders:
+
+| Purpose | File Location | Description |
+| :--- | :--- | :--- |
+| **Quick Action Guide** | [`JOB_APPLICATION_KIT_2026/READY_FOR_TOMORROW.md`](JOB_APPLICATION_KIT_2026/READY_FOR_TOMORROW.md) | 3-minute step-by-step checklist + all verification links |
+| **PDF Resume (Attach to Email/Chat)** | [`Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf`](Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf) *(or [`JOB_APPLICATION_KIT_2026/Resume_Nurlaila_Tahawan_L1_Support.pdf`](JOB_APPLICATION_KIT_2026/Resume_Nurlaila_Tahawan_L1_Support.pdf))* | Clean A4 PDF CV with profile photo, EF SET C2 Speaking, & SQL projects |
+| **Sincere EN Email & Thai DM** | [`Cover_Letters/Email_Submission_L1_Support.md`](Cover_Letters/Email_Submission_L1_Support.md) | Natural, sincere English email & Thai chat message (*"ฉบับจริงใจ ไม่อวย"*) |
+| **Formal EN Email & Thai Template** | [`JOB_APPLICATION_KIT_2026/EMAIL_APPLICATION_TEMPLATE.txt`](JOB_APPLICATION_KIT_2026/EMAIL_APPLICATION_TEMPLATE.txt) | Copy-ready plain text templates |
+| **Formal Cover Letter** | [`Cover_Letters/CoverLetter_L1_Support_SaaS_EN_2026.md`](Cover_Letters/CoverLetter_L1_Support_SaaS_EN_2026.md) | Full formal English Cover Letter |
+| **Interview Prep & Cheat Sheet** | [`CAREER_OPERATING_SYSTEM_2026/05_สัมภาษณ์_Interview_Prep/L1_Support_SaaS_Interview_Prep.md`](CAREER_OPERATING_SYSTEM_2026/05_สัมภาษณ์_Interview_Prep/L1_Support_SaaS_Interview_Prep.md) | 60-sec English pitch, SQL/Bash/HTTP cheat sheet, & customer de-escalation |
 
 ---
 
-## 📂 Repository Directory Structure
+## 🌐 2. Files Required for GitHub / GitHub Pages Website
+
+When pushing to GitHub (and hosting your live portfolio on **GitHub Pages**), these are the essential files that power your website:
+
+1. **[`index.html`](index.html)** — Your main interactive Web Portfolio (SQL Triage Sandbox, Bash Log Grep, 5 Notion Case Studies, 14 Verified Certificates, Download CV button).
+2. **[`images/`](images/)** — All web-optimized photos and certificate images loaded by `index.html`:
+   - `profile_photo.png` / `profile_photo_design.png` (Profile photo)
+   - `cert_datarockie_bootcamp12.png`, `cert_sql_crash_course.png`, `cert_googlesheets_crash_course.png`, `cert_r_crash_course.png`
+   - `cert_cefr_efset_b2.jpg`, `cert_cefr_yrutep_b1.jpg` (English proficiency certificates)
+   - `cert_ms_word.jpg`, `cert_ms_powerpoint.jpg`, `cert_web_development.png`
+   - `cert_usembassy.jpg`, `cert_yru_archery.png`, `cert_agsa_committee.jpg`
+   - `portfolio_ms_nurlaila_tahawan.jpg` / `portfolio_ms_nurlaila_tahawan_preview.jpg` (Teaching & Phonics portfolio)
+3. **[`Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf`](Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.pdf)** — Linked directly to the **"Download CV (PDF)"** buttons on `index.html`.
+4. **[`README.md`](README.md)** — Displays on the front page of your GitHub repository.
+
+---
+
+## 📂 3. Complete Folder Structure (`C:\Users\nurla\my_resume`)
 
 ```text
 my_resume/
-├── index.html                           # Standalone Web Portfolio (Interactive & Responsive)
-├── README.md                            # Repository Overview & Guide
-├── Master_Resume.md                     # Comprehensive Master Resume (All experiences & skills)
-├── Application_Tracker.md               # Tracking applied roles, stages, and follow-ups
-├── .gitignore                           # Git configuration for clean version control
+├── index.html                                     # 🌐 Standalone Interactive Web Portfolio
+├── README.md                                      # 📖 Repository Map & Git Guide (This file)
+├── GEMINI.md                                      # 🤖 AI Assistant Rules (Auto-run, minimal typing)
+├── Master_Resume.md                               # 📄 Master CV (All experiences & skills)
+├── Application_Tracker.md                         # 📊 Job Application Status Tracker
+├── .gitignore                                     # 🛡️ Git ignore rules (excludes temp/zip/duplicate folders)
 │
-├── Tailored_Resumes/                    # Tailored Resumes for specific job titles
-│   ├── Resume_L1_Support_SaaS_EN_2026.md   # Tailored for L1 Support (SaaS Remote 100%)
-│   ├── Resume_DataAnalyst_EN_2026.md       # Tailored for Data Analyst roles
-│   └── Resume_EnglishTeacher_EN_2026.md    # Tailored for English Education roles
+├── JOB_APPLICATION_KIT_2026/                      # 🚀 Ready-to-Send Application Package
+│   ├── READY_FOR_TOMORROW.md                      # Quick checklist & all official links
+│   ├── EMAIL_APPLICATION_TEMPLATE.txt             # Copy-paste English & Thai templates
+│   └── Resume_Nurlaila_Tahawan_L1_Support.pdf     # Ready-to-attach PDF Resume
 │
-├── Cover_Letters/                       # Cover Letters and Email Templates
-│   ├── CoverLetter_L1_Support_SaaS_EN_2026.md # Formal English Cover Letter for SaaS Support
-│   ├── Email_Submission_L1_Support.md         # Ready-to-send English email & Thai chat pitch
-│   └── CoverLetter_Template.md                # Standard Cover Letter Template
+├── Tailored_Resumes/                              # 📄 Role-Specific Resumes
+│   ├── Resume_L1_Support_SaaS_EN_2026.pdf         # Compiled A4 PDF CV (Linked by index.html)
+│   ├── Resume_L1_Support_SaaS_EN_2026.html        # Printable A4 HTML source with photo
+│   ├── Resume_L1_Support_SaaS_EN_2026.md          # Markdown source for L1 Support CV
+│   ├── Resume_DataAnalyst_EN_2026.md              # Tailored for Data Analyst roles
+│   └── Resume_EnglishTeacher_EN_2026.md           # Tailored for English Teacher roles
 │
-├── Portfolio_&_Projects/                # Project Documentation & Links
-│   ├── Portfolio_Link_&_Overview.md        # Portfolio links & social links
-│   └── Project_Summaries.md                # Detailed project descriptions
+├── Cover_Letters/                                 # ✉️ Outreach & Cover Letters
+│   ├── Email_Submission_L1_Support.md             # Sincere English Email & Thai DM ("ฉบับจริงใจ ไม่อวย")
+│   ├── CoverLetter_L1_Support_SaaS_EN_2026.md     # Formal English Cover Letter
+│   └── CoverLetter_Template.md                    # General Cover Letter Template
 │
-├── Certificates_&_Credentials/          # Verified Certificates & Original Credentials
-│   ├── 01_Computer_&_Technical/               # SQL, Sheets, R, Word, PowerPoint, Web Blog
-│   ├── 02_Languages_&_Teaching/               # CEFR English, Transcripts, Teaching credentials
-│   ├── 03_Volunteers_&_Activities/            # U.S. Embassy, Archery, Scouting, Extracurriculars
-│   └── 04_Raw_Archives_Zip/                   # Drive backup zip archives
+├── Notion_Portfolio/                              # 📝 Markdown Backups of Notion Case Studies
+│   ├── 00_Master_Hub_Page.md
+│   ├── 03_Case_Study_Chinook_SQL.md
+│   ├── 04_Case_Study_Regex_Date_Parser.md
+│   └── 05_Case_Study_Dynamic_Query.md
 │
-├── images/                              # High-Res Web Assets used by index.html
-│   ├── cert_datarockie_bootcamp12.png         # DataRockie completion card (Top 20% Mastered)
-│   ├── cert_sql_crash_course.png              # SQL Crash Course Certificate
-│   ├── cert_googlesheets_crash_course.png     # Google Sheets Crash Course Certificate
-│   ├── cert_r_crash_course.png                # R Programming Crash Course Certificate
-│   ├── cert_ms_word.jpg                       # Microsoft Word 2013 Advanced Certificate
-│   ├── cert_ms_powerpoint.jpg                 # Microsoft PowerPoint Presentation Certificate
-│   ├── cert_web_development.png               # WordPress & R Markdown Technical Blog
-│   ├── cert_usembassy.jpg                     # U.S. Embassy Bangkok Appreciation certificate
-│   ├── cert_yru_archery.png                   # YRU Archery Club leadership certificate
-│   ├── cert_agsa_committee.jpg                # A.G.S.A Association certificate
-│   ├── datarockie_scholarship_story.png       # DataRockie scholarship story image
-│   └── signature.png                          # Digital signature
+├── Portfolio_&_Projects/                          # 🔗 Links & Project Write-ups
+│   ├── Portfolio_Link_&_Overview.md               # All Notion, GitHub, Cert, & Blog URLs
+│   └── Project_Summaries.md                       # Detailed project summaries
 │
-├── Assets_&_Photos/                     # Raw photos and signatures
-│   ├── Standard_Signature.png
-│   ├── my story it.png
-│   └── MY WEB BUT YOU MUT LOGIN FIST.png
+├── CAREER_OPERATING_SYSTEM_2026/                  # 🧠 Career Vault & Interview Prep
+│   └── 05_สัมภาษณ์_Interview_Prep/
+│       └── L1_Support_SaaS_Interview_Prep.md      # Full L1 Support Interview Guide & Scripts
 │
-└── CAREER_OPERATING_SYSTEM_2026/        # Career Operating System Vault
-    ├── 01_คลังข้อมูลหลัก_Master_Vault/
-    ├── 05_สัมภาษณ์_Interview_Prep/          # L1 Support Interview Cheatsheet & STAR stories
-    └── ...
+├── images/                                        # 🖼️ Web Assets Required by index.html & HTML CV
+└── Certificates_&_Credentials/                    # 🏅 Original PDF/Image Certificates by Category
+    ├── 01_Computer_&_Technical/
+    ├── 02_Languages_&_Teaching/
+    └── 03_Volunteers_&_Activities/
 ```
-
----
-
-## 🚀 Quick Apply Kit for L1 Support (SaaS Remote)
-
-1. **Email / Message Pitch:** [Email_Submission_L1_Support.md](Cover_Letters/Email_Submission_L1_Support.md)
-2. **Resume (CV):** [Resume_L1_Support_SaaS_EN_2026.md](Tailored_Resumes/Resume_L1_Support_SaaS_EN_2026.md)
-3. **Interview Preparation Guide:** [L1_Support_SaaS_Interview_Prep.md](CAREER_OPERATING_SYSTEM_2026/05_สัมภาษณ์_Interview_Prep/L1_Support_SaaS_Interview_Prep.md)
-4. **Online Credential Verification:** [theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9](https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9)
