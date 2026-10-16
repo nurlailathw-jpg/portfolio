@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive CV — Nurlaila Tahawan (L1 Technical Support Engineer)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-accent: #2563eb;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: var(--text-dark);
+      background: var(--bg);
+      line-height: 1.52;
+      font-size: 9.7pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Action Bar (Screen Only) */
+    .action-bar {
+      background: #0f172a;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .action-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .action-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .action-btn.secondary {
+      background: #334155;
+    }
+
+    .action-btn.secondary:hover {
+      background: #475569;
+    }
+
+    /* Page Container */
+    .page {
+      max-width: 840px;
+      margin: 24px auto 40px;
+      background: #ffffff;
+      padding: 40px 48px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-photo {
+      width: 92px;
+      height: 116px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .header-details {
+      flex-grow: 1;
+    }
+
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+
+    .role-title {
+      font-size: 10.4pt;
+      font-weight: 700;
+      color: var(--primary-accent);
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
+    .contact-line {
+      margin-top: 5px;
+      color: var(--text-muted);
+      font-size: 8.6pt;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+    }
+
+    a {
+      color: var(--primary-accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cert-link {
+      font-size: 8.3pt;
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 1px 6px;
+      border-radius: 4px;
+      border: 1px solid #bfdbfe;
+      margin-left: 4px;
+      display: inline-block;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cert-link:hover {
+      background: #dbeafe;
+      text-decoration: none;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    /* Content Elements */
+    p {
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 5px;
+    }
+
+    .summary-text {
+      line-height: 1.48;
+    }
+
+    .skill-category {
+      margin-bottom: 4px;
+      line-height: 1.42;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.4pt;
+      background: #f1f5f9;
+      padding: 1px 4px;
+      border-radius: 3px;
+      color: #0f172a;
+    }
+
+    /* Experience / Projects / Education Items */
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+      gap: 8px;
+    }
+
+    .item-title {
+      font-size: 9.9pt;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .item-title a {
+      color: var(--text-dark);
+      text-decoration: none;
+    }
+
+    .item-title a:hover {
+      color: var(--primary-accent);
+      text-decoration: underline;
+    }
+
+    .item-subtitle {
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 8.8pt;
+    }
+
+    .item-date {
+      font-size: 8.6pt;
+      color: var(--text-muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 2px;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 2.5px;
+      color: #334155;
+      line-height: 1.42;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      @page {
+        size: A4;
+        margin: 7mm 11mm;
+      }
+
+      body {
+        background: white;
+        font-size: 8.9pt;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .page {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+        border-radius: 0;
+      }
+
+      .header {
+        border-bottom-width: 2px;
+        padding-bottom: 7px;
+        margin-bottom: 9px;
+      }
+
+      .header-content {
+        gap: 14px;
+      }
+
+      .profile-photo {
+        width: 74px;
+        height: 94px;
+      }
+
+      .name {
+        font-size: 19.5pt;
+      }
+
+      .role-title {
+        font-size: 9.4pt;
+        margin-bottom: 3px;
+      }
+
+      .section {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .item {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: #1d4ed8;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Action Bar -->
+  <div class="action-bar">
+    <a href="https://nurlailathw-jpg.github.io/portfolio/Nurlaila_Tahawan_CV.pdf" download="Nurlaila_Tahawan_CV.pdf" class="action-btn">📥 Download PDF Version</a>
+    <button class="action-btn secondary" onclick="window.print()">🖨️ Print CV</button>
+    <a href="https://nurlailathw-jpg.github.io/portfolio/" class="action-btn secondary">🌐 Interactive Web Portfolio (SQL/Bash Sandbox)</a>
+    <a href="https://github.com/nurlailathw-jpg/portfolio" target="_blank" class="action-btn secondary">🐙 GitHub Repo</a>
+  </div>
+
+  <div class="page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="https://nurlailathw-jpg.github.io/portfolio/" target="_blank">
+          <img src="https://nurlailathw-jpg.github.io/portfolio/images/profile_photo.png" alt="Nurlaila Tahawan" class="profile-photo">
+        </a>
+        <div class="header-details">
+          <h1 class="name">Nurlaila Tahawan</h1>
+          <div class="role-title">Bilingual L1 Technical Support Engineer | SaaS & Data Operations (100% Remote)</div>
+          <div class="contact-line">
+            <span>📍 Satun 91140, Thailand (UTC+7)</span>
+            <span>📞 <a href="tel:+66807128297">+66 80 712 8297</a></span>
+            <span>✉️ <a href="mailto:nurlaila.thw@gmail.com">nurlaila.thw@gmail.com</a></span>
+            <span>🌐 <a href="https://nurlailathw-jpg.github.io/portfolio/" target="_blank">Web Portfolio ↗</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/nurlaila-tahawan-271569305/" target="_blank">LinkedIn ↗</a></span>
+            <span>🐙 <a href="https://github.com/nurlailathw-jpg" target="_blank">GitHub ↗</a></span>
+            <span>📝 <a href="https://nurlailatahawan.wordpress.com/" target="_blank">Tech Blog ↗</a></span>
+            <span>🏅 <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank">DataRockie Cert ↗</a></span>
+            <span>🗣️ <a href="https://cert.efset.org/th/P7dEUX" target="_blank">EF SET C2 Speaking ↗</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Recent graduate with a Bachelor's in English Education and practical technical training from <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank"><strong>DataRockie Data Science Bootcamp (Batch 12 – Scholarship Recipient, Top 20% Rank)</strong></a>. Fluent in <strong>English communication</strong> (<a href="https://cert.efset.org/th/P7dEUX" target="_blank">EF SET CEFR B2 overall, C2 Proficient in Speaking 73/100</a>) with international speakers, combined with a solid practical foundation in <strong>SQL database querying</strong> and active self-study in <strong>Python and Bash</strong>. Highly disciplined, patient, and motivated by a strong family background in IT to excel in an entry-level L1 Support role, delivering dependable 100% remote coverage for global SaaS users in the Thailand/APAC timezone.
+      </p>
+    </section>
+
+    <!-- Skills & Competencies -->
+    <section class="section">
+      <h2 class="section-title">Skills & Competencies</h2>
+      <div class="skill-category">
+        <span class="skill-label">Languages:</span> Thai (Native), English (Fluent – <a href="https://cert.efset.org/th/P7dEUX" target="_blank">EF SET CEFR B2 Certified with C2 Proficient in Speaking</a>; <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_cefr_yrutep_b1.jpg" target="_blank">YRU-TEP B1</a>; confident in technical reading, customer triage, and verbal guidance).
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Databases & Querying:</span> SQL (Foundational & Intermediate: <code>SELECT</code>, <code>WHERE</code>, <code>JOIN</code>, <code>GROUP BY</code>, data filtering, sorting, diagnosing database record discrepancies).
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Scripting & Command Line:</span> Python & Bash (Actively Learning / Foundational: script syntax, basic terminal navigation, log file inspection, running automation commands).
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Tools & Software:</span> Spreadsheets (Google Sheets & Excel formulas), R Markdown, Microsoft Office (Word, PowerPoint), Git & GitHub, Notion.
+      </div>
+      <div class="skill-category">
+        <span class="skill-label">Support & Soft Skills:</span> Active Listening, Problem Diagnosis, Clear & Patient Explanations, High Workload / Ticket Queue Stamina, Coachable & Fast Learner, 100% Remote Work Discipline.
+      </div>
+    </section>
+
+    <!-- Technical Training & Certifications (All Clickable!) -->
+    <section class="section">
+      <h2 class="section-title">Technical Training & Verified Certifications (Click Any Item to Verify)</h2>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank">Data Science Bootcamp (Batch 12) – Full Scholarship Recipient (Top 20% Mastered) ↗</a></span>
+          <span class="item-date">2023 – 2026</span>
+        </div>
+        <div class="item-subtitle">The School of Generalist / DataRockie | <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank">Verify Online ↗</a> | <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_datarockie_bootcamp12.png" target="_blank">View Certificate Card ↗</a> | <a href="https://nurlailathw-jpg.github.io/portfolio/images/datarockie_scholarship_story.png" target="_blank">Scholarship Story ↗</a></div>
+        <ul class="bullet-list">
+          <li>Awarded competitive scholarship for 100+ hours of hands-on technical training covering SQL databases, Spreadsheets, data transformation, and programming basics. Ranked Top 20% across 240 assessment questions.</li>
+          <li>Wrote SQL queries on relational databases to extract, filter, and inspect customer and transaction data records.</li>
+          <li>Actively continuing self-study in Python and Bash scripting to automate repetitive tasks and navigate Unix command-line environments.</li>
+        </ul>
+      </div>
+
+      <div class="item" style="margin-bottom: 0;">
+        <div class="item-title" style="font-size: 9.4pt; margin-bottom: 3px;">Official Credentials & Certificate Links:</div>
+        <ul class="bullet-list" style="margin-top: 1px;">
+          <li><strong>EF SET English Certificate (CEFR B2 / C2 Speaking 73/100)</strong> <a href="https://cert.efset.org/th/P7dEUX" target="_blank" class="cert-link">Verify Online ↗</a> <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_cefr_efset_b2.jpg" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>English Proficiency Certificate (CEFR B1)</strong> – Yala Rajabhat University YRU-TEP <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_cefr_yrutep_b1.jpg" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>SQL Crash Course Certificate</strong> – DataRockie School (<code>cert_650yhcyI</code>) <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_sql_crash_course.png" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>Google Sheets Crash Course Certificate</strong> – DataRockie School (<code>cert_0z932crs</code>) <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_googlesheets_crash_course.png" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>R Programming Crash Course Certificate</strong> – DataRockie School (<code>cert_z8cpdfsm</code>) <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_r_crash_course.png" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>Web Blog & Data Storytelling Certificate</strong> – WordPress Technical Blog <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_web_development.png" target="_blank" class="cert-link">View Cert ↗</a> <a href="https://nurlailatahawan.wordpress.com/" target="_blank" class="cert-link">Visit Blog ↗</a></li>
+          <li><strong>Advanced Microsoft Word Certification (18 Hours)</strong> – Microsoft Thailand / Witayaput <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_ms_word.jpg" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>Microsoft PowerPoint Presentation Certificate</strong> – Satun PAO <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_ms_powerpoint.jpg" target="_blank" class="cert-link">View Cert ↗</a></li>
+          <li><strong>Volunteer Appreciation Recognition</strong> – U.S. Embassy Bangkok (American Corner Yala) <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_usembassy.jpg" target="_blank" class="cert-link">View Cert ↗</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Projects & Case Studies (All Clickable!) -->
+    <section class="section">
+      <h2 class="section-title">Technical Projects & Live Case Studies (Click to Open on Notion)</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55" target="_blank">1. Relational Database SQL Triage (Chinook Project) ↗</a></span>
+          <span class="item-date"><a href="https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55" target="_blank" class="cert-link">Open Notion Case Study ↗</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Wrote complex multi-table SQL queries joining up to 5 relational tables (<code>customers</code>, <code>invoices</code>, <code>employees</code>, <code>tracks</code>, <code>genres</code>).</li>
+          <li>Mapped customer accounts directly to assigned support representatives via <code>SupportRepId</code> to inspect account status and spending patterns.</li>
+          <li>Executed data filtering (<code>WHERE</code>, <code>IN</code>, <code>LIKE</code>), grouping (<code>GROUP BY</code>), and aggregations (<code>SUM</code>, <code>COUNT</code>) to troubleshoot business records.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://chip-curler-7a4.notion.site/Project-ID-Card-Parser-TH-to-EN-Date-3ec7c0a9a17a80b39f56eb9efa1382f8" target="_blank">2. Regex Text Parser & Thai-to-English Date Normalizer ↗</a></span>
+          <span class="item-date"><a href="https://chip-curler-7a4.notion.site/Project-ID-Card-Parser-TH-to-EN-Date-3ec7c0a9a17a80b39f56eb9efa1382f8" target="_blank" class="cert-link">Open Notion Case Study ↗</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Engineered text parsing workflows using Regular Expressions (<code>REGEXEXTRACT</code>, <code>REGEXMATCH</code>, <code>REGEXREPLACE</code>) to parse unstructured strings into structured fields.</li>
+          <li>Formulated date normalization logic, converting non-standard Thai Buddhist Era dates into international ISO standard date formats.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a" target="_blank">3. Dynamic Query & Boolean Filtering System ↗</a></span>
+          <span class="item-date"><a href="https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a" target="_blank" class="cert-link">Open Notion Case Study ↗</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Built dynamic database queries with parameter controls, enforcing boolean logic operator precedence (<code>(A OR B) AND C</code>) for accurate record retrieval.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7" target="_blank">4. Automated Reproducible Reporting with R Markdown ↗</a></span>
+          <span class="item-date"><a href="https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7" target="_blank" class="cert-link">Open Notion Case Study ↗</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Authored "Built a report with R" documenting automated reproducible data reporting pipelines using R Markdown, knitr, and ggplot2.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title"><a href="https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64" target="_blank">5. Data Analyst Portfolio (DataRockie School Batch 12) ↗</a></span>
+          <span class="item-date"><a href="https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64" target="_blank" class="cert-link">Open Notion Portfolio ↗</a></span>
+        </div>
+        <ul class="bullet-list">
+          <li>Comprehensive coursework portfolio covering 100+ hours of data analysis, SQL queries, and spreadsheet automation (Top 20% ranking).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Work & Leadership Experience -->
+    <section class="section">
+      <h2 class="section-title">Work & Leadership Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">English Teacher & Program Coordinator</span>
+          <span class="item-date">Dec 2023 – Present | <a href="https://nurlailathw-jpg.github.io/portfolio/images/portfolio_ms_nurlaila_tahawan.jpg" target="_blank" class="cert-link">View Teaching Portfolio ↗</a></span>
+        </div>
+        <div class="item-subtitle">Darul Ma'arif Foundation & Educational Institutions, Thailand</div>
+        <ul class="bullet-list">
+          <li>Communicate daily in English, teaching presentation skills, communication, and basic grammar to secondary students.</li>
+          <li>Tracked and evaluated student progress data to identify learning gaps and adjust coaching methods.</li>
+          <li>Coached students to win 2nd Runner-up (Gold Medal) in English Crossword and 5th Place (Gold Medal) in Storytelling at provincial competitions.</li>
+          <li>Handled day-to-day administrative coordination, scheduling, and direct problem-solving with teachers, students, and parents.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Vice President & Committee Member</span>
+          <span class="item-date">Mar 2022 – May 2023 | <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_yru_archery.png" target="_blank" class="cert-link">View YRU Cert ↗</a> <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_agsa_committee.jpg" target="_blank" class="cert-link">View AGSA Cert ↗</a></span>
+        </div>
+        <div class="item-subtitle">YRU Archery Club & A.G.S.A Association, Yala, Thailand</div>
+        <ul class="bullet-list">
+          <li>Translated complex tournament rules and safety guidelines from Thai to English for international athletes during "Archery in the Garden 2022".</li>
+          <li>Handled administrative records, participant coordination, and event logistics under tight schedules.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Volunteer & Community Coordinator</span>
+          <span class="item-date">2020 – 2024 | <a href="https://nurlailathw-jpg.github.io/portfolio/images/cert_usembassy.jpg" target="_blank" class="cert-link">View U.S. Embassy Cert ↗</a></span>
+        </div>
+        <div class="item-subtitle">American Corner Yala & Various Organizations</div>
+        <ul class="bullet-list">
+          <li>Supported cross-cultural English activities and community sessions; awarded Volunteer Appreciation Certificate by the U.S. Embassy Bangkok.</li>
+          <li>Assisted in organizing online youth workshops, managing video calls, and resolving participant connection issues.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" style="margin-bottom: 0;">
+      <h2 class="section-title">Education</h2>
+      <div class="item" style="margin-bottom: 6px;">
+        <div class="item-header">
+          <span class="item-title">Bachelor of Education in English</span>
+          <span class="item-date">2020 – 2024</span>
+        </div>
+        <div class="item-subtitle">Yala Rajabhat University, Thailand</div>
+      </div>
+      <div class="item" style="margin-bottom: 0;">
+        <div class="item-header">
+          <span class="item-title">Science & Mathematics Program</span>
+          <span class="item-date">2017 – 2019</span>
+        </div>
+        <div class="item-subtitle">Pathanawittaya School, Thailand</div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
